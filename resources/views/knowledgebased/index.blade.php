@@ -56,14 +56,11 @@
 		             <div class="col-lg-4">
 		             	<h2>Article</h2>
 		                            <ul class="list-unstyled">
-		                                <li><a href="#">Screencast Tutorials</a></li>
-		                                <li><a href="#">Screencasting</a></li>
-		                                <li><a href="#">Edit Videos</a></li>
-		                                <li><a href="#">Creating Videos</a></li>
-		                                <li><a href="#">Respond to notification</a></li>
-		                                <li><a href="#">Follow Up Team</a></li>
-		                                <li><a href="#">Forwarding Emails</a></li>
-		                                <li><a href="#">Creating Videos</a></li>
+		                            @foreach($categories as $category)
+		                                @foreach($category->knowledge_based as $article)
+			                                <li><a href="/knowledgebase/{{ $article->id }} ">{{ $article->title}}</a></li>
+			                     @endforeach
+			                 @endforeach
 		                                
 		                            </ul>
 		                        </div>		      
