@@ -167,7 +167,7 @@ return [
          * Package Service Providers...
          */
         Laravel\Tinker\TinkerServiceProvider::class,
-        //Kordy\Ticketit\TicketitServiceProvider::class,
+        Kordy\Ticketit\TicketitServiceProvider::class,
 
         /*
          * Application Service Providers...

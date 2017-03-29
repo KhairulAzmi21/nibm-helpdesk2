@@ -78,6 +78,7 @@
                     @else
                         <a href="{{ url('/login') }}">Login</a>
                         <a href="{{ url('/register') }}">Register</a>
+                        <a href="{{ url('category') }}">Knowledge Base </a>
                     @endif
                 </div>
             @endif
