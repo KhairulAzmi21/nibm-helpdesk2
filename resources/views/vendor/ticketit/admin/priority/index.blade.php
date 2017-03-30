@@ -28,6 +28,7 @@
                     <tr>
                         <td>{{ trans('ticketit::admin.table-id') }}</td>
                         <td>{{ trans('ticketit::admin.table-name') }}</td>
+                        <td>{{ trans('ticketit::admin.table-days') }} </td>
                         <td>{{ trans('ticketit::admin.table-action') }}</td>
                     </tr>
                 </thead>
@@ -40,6 +41,7 @@
                         <td style="color: {{ $priority->color }}; vertical-align: middle">
                             {{ $priority->name }}
                         </td>
+                        <td> {{ $priority->days }}</td>
                         <td>
                             {!! link_to_route(
                                                     $setting->grab('admin_route').'.priority.edit', trans('ticketit::admin.btn-edit'), $priority->id,

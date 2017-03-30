@@ -23,6 +23,7 @@ Route::get('/', function () {
 Route::resource('/category','KnowledgeBasedCategoryController');
 Route::resource('/knowledgebase','KnowledgeBasedController');
 
+
 Auth::routes();
 
 Route::get('/home', function(){

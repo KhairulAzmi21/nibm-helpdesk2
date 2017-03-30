@@ -26,7 +26,7 @@ class KnowledgeBasedCategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('knowledgebased.category');
     }
 
     /**
@@ -37,7 +37,10 @@ class KnowledgeBasedCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        KnowledgeBasedCategory::create([
+            'name' => request('name'),
+            ]);
+        return redirect('/category');
     }
 
     /**

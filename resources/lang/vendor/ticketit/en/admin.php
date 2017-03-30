@@ -17,6 +17,7 @@ return [
   'table-hash'                    => '#',
   'table-id'                      => 'ID',
   'table-name'                    => 'Name',
+  'table-days'                    =>'Days',
   'table-action'                  => 'Action',
   'table-categories'              => 'Categories',
   'table-join-category'           => 'Joined Categories',
