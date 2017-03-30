@@ -54,6 +54,7 @@
                             <li><a href="{{ route('register') }}">Register</a></li>
                             <li><a href="{{ url('/category') }}">KnowledgeBase</a></li>
                         @else
+                             <li><a href="{{ url('/category') }}">KnowledgeBase</a></li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                                     {{ Auth::user()->name }} <span class="caret"></span>
@@ -73,7 +74,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li><a href="{{ url('/category') }}">KnowledgeBase</a></li>
+                           
                         @endif
                     </ul>
                 </div>
