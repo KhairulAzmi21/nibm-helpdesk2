@@ -19,9 +19,11 @@
 		                    <!-- /.input-group -->
 		                </div>
 		                @if (!Auth::guest())
-
-		                <a href="{{asset('category/create') }}" class="btn btn-success">Create New Category</a> 
-		                <a href="{{asset('knowledgebase/create') }}" class="btn btn-primary ">Create New KB</a>
+				
+		                	<a href="{{asset('category/create') }}" class="btn btn-success">Create New Category</a> 
+		                	@if($categories->isNotEmpty())
+		                	<a href="{{asset('knowledgebase/create') }}" class="btn btn-primary ">Create New KB</a>
+		                	@endif
 
 		                @endif
 		                <!-- Knowledge Based Archive -->

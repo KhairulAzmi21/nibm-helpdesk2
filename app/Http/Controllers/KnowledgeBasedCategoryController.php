@@ -16,6 +16,7 @@ class KnowledgeBasedCategoryController extends Controller
     {
         $categories = KnowledgeBasedCategory::all();
 
+
         return view('knowledgebased.index',compact('categories'));
     }
 
@@ -40,6 +41,7 @@ class KnowledgeBasedCategoryController extends Controller
         KnowledgeBasedCategory::create([
             'name' => request('name'),
             ]);
+       
         return redirect('/category');
     }
 

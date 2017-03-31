@@ -17,7 +17,7 @@ class CreateKnowledgeBasedsTable extends Migration
             $table->increments('id');
              $table->string('knowledge_based_category_id');
             $table->string('title');
-            $table->text('body');
+            $table->longtext('body');
             $table->timestamps();
         });
     }

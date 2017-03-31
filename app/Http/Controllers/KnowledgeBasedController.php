@@ -30,6 +30,9 @@ class KnowledgeBasedController extends Controller
     public function create()
     {
         $categories= KnowledgeBasedCategory::all();
+            if($categories->isEmpty()){
+                    return back();
+            }
         return view('knowledgebased.create',compact('categories'));
     }
 
