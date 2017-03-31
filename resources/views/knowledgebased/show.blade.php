@@ -5,9 +5,17 @@
 @include('ticketit::shared.errors')
 	<div class="container">
 		<div class="row">
-
-			<h1> {{ $knowledgebase->title }}</h1>
-			<p> {!! $knowledgebase->body !!} </p>
+		    <div class="col-md-10">
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title">{{ $knowledgebase->title }}</h3>
+			  </div>
+			  <div class="panel-body">
+			    {!! $knowledgebase->body !!} 
+			 </div>
+			</div>
+		     </div>
+			
                          </div>
 	</div>
 @endsection
