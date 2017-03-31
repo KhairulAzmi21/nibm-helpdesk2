@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+@include('ticketit::shared.assets')
+@include('ticketit::shared.errors')
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
@@ -20,8 +22,10 @@
 					</div>
 					<div class="form-group">
 						<label for="body">Body</label>
-						<textarea class="form-control" id="body" name="body" rows="7"></textarea>
+						<textarea class="form-control summernote-editor" required id="body" name="body" rows="7"></textarea>
+                                                                        <span class="help-block">{!! trans('ticketit::lang.create-ticket-describe-issue') !!}</span>
 					</div>
+                                                            
 
 					<button type="submit" class="btn btn-primary">Submit</button>
 				</form>
@@ -30,3 +34,6 @@
 	</div>
 	
 @endsection
+@section('footer')
+    @include('ticketit::tickets.partials.summernote')
+@append
