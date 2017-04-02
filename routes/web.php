@@ -23,6 +23,10 @@ Route::get('/', function () {
 Route::resource('/category','KnowledgeBasedCategoryController');
 Route::resource('/knowledgebase','KnowledgeBasedController');
 
+Route::get('/logintest',function(){
+	return view('auth.logintest');
+});
+
 
 Auth::routes();
 

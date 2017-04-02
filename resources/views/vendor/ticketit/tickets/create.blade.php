@@ -25,13 +25,16 @@
                 </div>
             </div>
             <div class="form-inline row">
-                <div class="form-group col-lg-4">
+                <div class="form-group col-lg-6">
                     {!! CollectiveForm::label('priority', trans('ticketit::lang.priority') . trans('ticketit::lang.colon'), ['class' => 'col-lg-6 control-label']) !!}
-                    <div class="col-lg-6">
-                        {!! CollectiveForm::select('priority_id', $priorities, null, ['class' => 'form-control', 'required' => 'required']) !!}
+                    <div class="form-group col-lg-6">
+                         {!! CollectiveForm::text('priority', $priorities->name, ['class' => 'form-control', 'required' => 'required','disabled' => 'disabled']) !!}
+                         {{ CollectiveForm::hidden('priority_id', $priorities->id) }}
+
+
                     </div>
                 </div>
-                <div class="form-group col-lg-4">
+                <div class="form-group col-lg-6">
                     {!! CollectiveForm::label('category', trans('ticketit::lang.category') . trans('ticketit::lang.colon'), ['class' => 'col-lg-6 control-label']) !!}
                     <div class="col-lg-6">
                         {!! CollectiveForm::select('category_id', $categories, null, ['class' => 'form-control', 'required' => 'required']) !!}
