@@ -58,6 +58,7 @@ return [
   'no-replies'                       => 'No replies.',
   'owner'                            => 'Owner',
   'priority'                         => 'Priority',
+  'days'                            => 'Days',
   'reopen-ticket'                    => 'Reopen Ticket',
   'reply'                            => 'Reply',
   'responsible'                      => 'Responsible',

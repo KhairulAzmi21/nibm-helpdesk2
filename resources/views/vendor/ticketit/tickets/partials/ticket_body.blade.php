@@ -69,6 +69,12 @@
                                     {{ $ticket->priority->name }}
                                 </span>
                             </p>
+                            <p>
+                                <strong>{{ trans('ticketit::lang.days') }}</strong>{{ trans('ticketit::lang.colon') }}
+                                <span>
+                                    {{ $ticket->priority->days }}
+                                </span>
+                            </p>
                         </div>
                         <div class="col-md-6">
                             <p> <strong>{{ trans('ticketit::lang.responsible') }}</strong>{{ trans('ticketit::lang.colon') }}{{ $ticket->agent->name }}</p>

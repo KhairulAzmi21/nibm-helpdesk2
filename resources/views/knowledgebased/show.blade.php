@@ -5,7 +5,7 @@
 @include('ticketit::shared.errors')
 	<div class="container">
 		<div class="row">
-		    <div class="col-md-10">
+		    <div class="col-md-12">
 			<div class="panel panel-default">
 			  <div class="panel-heading">
 			    <h3 class="panel-title">{{ $knowledgebase->title }}</h3>
