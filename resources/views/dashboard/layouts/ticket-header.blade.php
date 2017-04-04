@@ -92,7 +92,7 @@
                                         <div class="widget-count panel-white">
                                             <div class="item-label text-center">
                                                 <div id="count-box3" class="count-box">
-                                                    {{ Kordy\Ticketit\Models\Ticket::active()->count()+Kordy\Ticketit\Models\Ticket::complete()->count() }}
+                                                    {{ Kordy\Ticketit\Models\Ticket::count() }}
                                                 </div>
                                                 <span class="title">Total Tickets</span>
                                             </div>

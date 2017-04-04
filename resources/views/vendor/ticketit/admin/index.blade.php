@@ -13,7 +13,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-3" style="font-size: 5em;">
-                                <i class="glyphicon glyphicon-th"></i>
+                                <i class="fa fa-fw fa-archive fa-size"></i>
                             </div>
                             <div class="col-xs-9 text-right">
                                 <h1>{{ $tickets_count }}</h1>
@@ -28,7 +28,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-3" style="font-size: 5em;">
-                                <i class="glyphicon glyphicon-wrench"></i>
+                                <i class="fa fa-fw fa-envelope-open fa-size"></i>
                             </div>
                             <div class="col-xs-9 text-right">
                                 <h1>{{ $open_tickets_count }}</h1>
@@ -43,7 +43,7 @@
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-3" style="font-size: 5em;">
-                                <i class="glyphicon glyphicon-thumbs-up"></i>
+                                <i class="fa fa-fw fa-envelope fa-size"></i>
                             </div>
                             <div class="col-xs-9 text-right">
                                 <h1>{{ $closed_tickets_count }}</h1>
