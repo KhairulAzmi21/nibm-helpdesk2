@@ -39,28 +39,37 @@
 			           
 			        </div>
 			        <!-- /.row -->
-				@foreach($categories as $category)
-				  
-				   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-				  <div class="panel panel-default">
-				    <div class="panel-heading" role="tab" id="headingOne">
-				      <h4 class="panel-title">
-				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{$category->id}}" aria-expanded="true" aria-controls="collapseOne">
-				          {{ $category->name }}
+
+			        @foreach($categories as $category)
+			        	
+			        	<div class="panel-group">
+				    <div class="panel panel-primary">
+				      <div class="panel-heading">
+				        <h4 class="panel-title">
+				         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{$category->id}}" aria-expanded="true" aria-controls="collapseOne">
+				          {{ $category->name }} <i class="fa fa-sort-desc pull-right" aria-hidden="true"></i>
 				        </a>
-				      </h4>
-				    </div>
-				    <div id="collapse{{$category->id}}" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="headingOne">
-				      <div class="panel-body">
-				          @foreach($category->knowledge_based as $article)
-			                                <li><a href="/knowledgebase/{{ $article->id }} ">{{ $article->title}}</a></li>
-			                      @endforeach
+				        </h4>
+
 				      </div>
+				      
+				      <div id="collapse{{$category->id}}" class="panel-collapse collapse">
+				        <ul class="list-group">
+				         @if($category->knowledge_based->isNotEmpty())
+				        @foreach($category->knowledge_based as $article)
+				        	  <li class="list-group-item"><a href="/knowledgebase/{{ $article->id }} ">{{ $article->title}}</a></li>      
+			                      @endforeach
+			                      @else
+			                          <li class="list-group-item">NO ARTICLE FOR THIS CATEGORY</li>    
+			                      @endif
+				        </ul> 
+				      </div>
+				    
 				    </div>
-				  </div>
 				</div>
 				
 				@endforeach
+				
 		             </div>
 		             <!-- Blog Categories Well -->
 		             <div class="col-lg-4">
