@@ -9,7 +9,7 @@
     @if($tickets_count)
         <div class="row">
             <div class="col-lg-3 col-md-4 col-lg-offset-1">
-                <div class="panel panel-default">
+                <div class="panel panel-primary">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-3" style="font-size: 5em;">
@@ -119,19 +119,19 @@
                 <ul class="nav nav-tabs nav-justified">
                     <li class="{{$active_tab == "cat" ? "active" : ""}}">
                         <a data-toggle="pill" href="#information-panel-categories">
-                            <i class="glyphicon glyphicon-folder-close"></i>
+                            <i class="fa fa-fw fa-folder"></i>
                             <small>{{ trans('ticketit::admin.index-categories') }}</small>
                         </a>
                     </li>
                     <li class="{{$active_tab == "agents" ? "active"  : ""}}">
                         <a data-toggle="pill" href="#information-panel-agents">
-                            <i class="glyphicon glyphicon-user"></i>
+                            <i class="fa fa-fw fa-user"></i>
                             <small>{{ trans('ticketit::admin.index-agents') }}</small>
                         </a>
                     </li>
                     <li class="{{$active_tab == "users" ? "active" : ""}}">
                         <a data-toggle="pill" href="#information-panel-users">
-                            <i class="glyphicon glyphicon-user"></i>
+                            <i class="fa fa-fw fa-user-circle"></i>
                             <small>{{ trans('ticketit::admin.index-users') }}</small>
                         </a>
                     </li>
@@ -143,11 +143,11 @@
                             <span>{{ trans('ticketit::admin.index-category') }}
                                 <span class="badge">{{ trans('ticketit::admin.index-total') }}</span>
                             </span>
-                            <span class="pull-right text-muted small">
-                                <em>
+                            <span class="pull-right large">
+                                <strong>
                                     {{ trans('ticketit::admin.index-open') }} /
                                      {{ trans('ticketit::admin.index-closed') }}
-                                </em>
+                                </strong>
                             </span>
                         </a>
                         @foreach($categories as $category)
@@ -155,11 +155,11 @@
                         <span style="color: {{ $category->color }}">
                             {{ $category->name }} <span class="badge">{{ $category->tickets()->count() }}</span>
                         </span>
-                        <span class="pull-right text-muted small">
-                            <em>
+                        <span class="pull-right large">
+                            <strong>
                                 {{ $category->tickets()->whereNull('completed_at')->count() }} /
                                  {{ $category->tickets()->whereNotNull('completed_at')->count() }}
-                            </em>
+                            </strong>
                         </span>
                             </a>
                         @endforeach
@@ -170,11 +170,11 @@
                             <span>{{ trans('ticketit::admin.index-agent') }}
                                 <span class="badge">{{ trans('ticketit::admin.index-total') }}</span>
                             </span>
-                            <span class="pull-right text-muted small">
-                                <em>
+                            <span class="pull-right large">
+                                <strong>
                                     {{ trans('ticketit::admin.index-open') }} /
                                     {{ trans('ticketit::admin.index-closed') }}
-                                </em>
+                                </strong>
                             </span>
                         </a>
                         @foreach($agents as $agent)
@@ -186,7 +186,7 @@
                                          $agent->agentTickets(true)->count() }}
                                     </span>
                                 </span>
-                                <span class="pull-right text-muted small">
+                                <span class="pull-right  large">
                                     <em>
                                         {{ $agent->agentTickets(false)->count() }} /
                                          {{ $agent->agentTickets(true)->count() }}
@@ -201,7 +201,7 @@
                             <span>{{ trans('ticketit::admin.index-user') }}
                                 <span class="badge">{{ trans('ticketit::admin.index-total') }}</span>
                             </span>
-                            <span class="pull-right text-muted small">
+                            <span class="pull-right large">
                                 <em>
                                     {{ trans('ticketit::admin.index-open') }} /
                                     {{ trans('ticketit::admin.index-closed') }}
@@ -217,7 +217,7 @@
                                          $user->userTickets(true)->count() }}
                                     </span>
                                 </span>
-                                <span class="pull-right text-muted small">
+                                <span class="pull-right large">
                                     <em>
                                         {{ $user->userTickets(false)->count() }} /
                                         {{ $user->userTickets(true)->count() }}
