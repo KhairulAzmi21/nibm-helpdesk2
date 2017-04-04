@@ -37,70 +37,66 @@
                 </div>
                 
                 <ul class="navigation">
-                    <li>
+                    <li {!! (Request::is('tickets/create') ? 'class="active"':"") !!}>     
                         <a href="{{ action('\Kordy\Ticketit\Controllers\TicketsController@create') }}">
                             <i class="menu-icon fa fa-fw fa-pencil-square"></i>
+                        
                             <span class="mm-text ">{{ trans('ticketit::lang.btn-create-new-ticket') }}</span>
                         </a>
                     </li>
-                    <li>
+                    <li {!! (Request::is('tickets') ? 'class="active"':"") !!}> 
                         <a href="{{ action('\Kordy\Ticketit\Controllers\TicketsController@index') }}">
                             <i class="menu-icon fa fa-fw fa-envelope-open"></i>
                             <span class="mm-text ">{{ trans('ticketit::lang.nav-active-tickets') }}</span>
                         </a>
                     </li>
-                    <li>
+                    <li {!! (Request::is('tickets/complete') ? 'class="active"':"") !!}> 
                         <a href="{{ action('\Kordy\Ticketit\Controllers\TicketsController@indexComplete') }}">
                             <i class="menu-icon fa fa-fw fa-envelope"></i>
                             <span class="mm-text ">{{ trans('ticketit::lang.nav-completed-tickets') }}</span>
                         </a>
                     </li>
                     @if($u->isAdmin())
-                    <li class="active" id="active">
-                        <a href="{{ action('\Kordy\Ticketit\Controllers\TicketsController@indexComplete') }}">
+                    <li {!! (Request::is('tickets-admin') ? 'class="active"':"") !!}> 
+                        <a href="{{ action('\Kordy\Ticketit\Controllers\DashboardController@index') }}">
                             <i class="menu-icon fa fa-fw fa-home"></i>
                             <span class="mm-text ">{{ trans('ticketit::admin.nav-dashboard') }}</span>
                         </a>
                     </li>
                     
-                    <li class="menu-dropdown">
+                    <li class="menu-dropdown {!! (Request::is('tickets-admin/*') ? 'active':'') !!}" >
                         <a href="#">
                             <i class="menu-icon fa fa-fw fa-tachometer"></i>
                             <span> {{ trans('ticketit::admin.nav-settings') }} </span>
                             <span class="fa arrow"></span>
                         </a>
                         <ul class="sub-menu">
-                            <li>
+                            <li {!! (Request::is('tickets-admin/status') ? 'class="active"':"") !!}>
                                 <a href="{{ action('\Kordy\Ticketit\Controllers\StatusesController@index') }}">
                                     <i class="fa fa-fw fa-fire"></i> {{ trans('ticketit::admin.nav-statuses') }}
                                 </a>
                             </li>
-                            <li>
-                                <a href="{{ action('\Kordy\Ticketit\Controllers\StatusesController@index') }}">
-                                    <i class="fa fa-fw fa-file-text-o"></i> {{ trans('ticketit::admin.nav-statuses') }}
-                                </a>
-                            </li>
-                            <li>
+                            <li {!! (Request::is('tickets-admin/priority') ? 'class="active"':"") !!}>
                                  <a href="{{ action('\App\Http\Controllers\Ticketit\PrioritiesController@index') }}">
                                     <i class="fa fa-fw fa-warning"></i> {{ trans('ticketit::admin.nav-priorities') }}
                                 </a>
                             </li>
-                            <li>
+                            <li {!! (Request::is('tickets-admin/agent') ? 'class="active"':"") !!}>
                                 <a href="{{ action('\Kordy\Ticketit\Controllers\AgentsController@index') }}">
                                     <i class="fa fa-fw fa-fire"></i>{{ trans('ticketit::admin.nav-agents') }}
                                 </a>
                             </li>
-                            <li>
+                            <li {!! (Request::is('tickets-admin/category') ? 'class="active"':"") !!}>
                                  <a href="{{ action('\Kordy\Ticketit\Controllers\CategoriesController@index') }}">
                                     <i class="fa fa-fw fa-cog"></i> {{ trans('ticketit::admin.nav-categories') }}
                                 </a>
                             </li>
-                            <li>
+                            <li {!! (Request::is('tickets-admin/configuration') ? 'class="active"':"") !!}>
                                 <a href="{{ action('\Kordy\Ticketit\Controllers\ConfigurationsController@index') }}">
                                     <i class="fa fa-fw fa-newspaper-o"></i> {{ trans('ticketit::admin.nav-configuration') }}
                                 </a>
                             </li>
-                            <li>
+                            <li {!! (Request::is('tickets-admin/administrator') ? 'class="active"':"") !!}>
                                 <a href="{{ action('\Kordy\Ticketit\Controllers\AdministratorsController@index')}}">
                                     <i class="fa fa-fw fa-newspaper-o"></i> {{ trans('ticketit::admin.nav-administrator') }}
                                 </a>
@@ -108,7 +104,7 @@
                         </ul>
                     </li>
                     @endif
-                    <li>
+                    <li {!! (Request::is('category') ? 'class="active"':"") !!}>
                         <a href="{{ route('category.index') }}">
                             <i class="menu-icon fa fa-fw fa-home"></i>
                             <span class="mm-text ">KnowledgeBase</span>
