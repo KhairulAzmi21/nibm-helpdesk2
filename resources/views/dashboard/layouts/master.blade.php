@@ -32,19 +32,19 @@
     <div class="loader_img"><img src="img/loading.gif" alt="loading..." height="64" width="64"></div>
 </div> 
 @include('dashboard.layouts.nav')
-            <div class="wrapper row-offcanvas row-offcanvas-left">
-            @if(!Auth::guest())
+     <div class="wrapper row-offcanvas row-offcanvas-left">
+            
             @include('dashboard.layouts.leftsidebar')
-            @endif
-                
-                <aside class="right-side">
+            <aside class="right-side">
+                <section class="content sec-mar">
                     <!-- Content Header (Page header) -->
                     {{-- @include('dashboard.layouts.header') --}}
                     <!--section ends-->
                 @yield('content')
-                <!-- /#right --> </section>
-        <!-- /.content --> </aside>
-    <!-- /.right-side --> </div>
+                <!-- /#right --> 
+                </section><!-- /.content --> 
+            </aside><!-- /.right-side --> 
+    </div>
 
 <!-- global js -->
 <div id="qn"></div>

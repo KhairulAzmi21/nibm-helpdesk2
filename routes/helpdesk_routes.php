@@ -2,6 +2,12 @@
 
 Route::group(['middleware' => \Kordy\Ticketit\Helpers\LaravelVersion::authMiddleware()], function () use ($main_route, $main_route_path, $admin_route, $admin_route_path) {
 
+    Route::get('/ticketsa', function(){
+        return view('dashboard.index');
+    });
+    Route::resource('/ticketsb', 'App\Http\Controllers\Ticketit\TicketsController');
+    Route::get('ticketsb/complete','App\Http\Controllers\Ticketit\TicketsController@indexComplete');
+
     //Route::group(['middleware' => '', function () use ($main_route) {
         //Ticket public route
         Route::get("$main_route_path/complete", 'Kordy\Ticketit\Controllers\TicketsController@indexComplete')

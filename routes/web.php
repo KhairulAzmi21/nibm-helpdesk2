@@ -24,7 +24,7 @@ Route::resource('/category','KnowledgeBasedCategoryController');
 Route::resource('/knowledgebase','KnowledgeBasedController');
 
 Route::get('/test',function(){
-	return view('auth.passwords.email2');
+	return view('dashboard.index2');
 });
 
 

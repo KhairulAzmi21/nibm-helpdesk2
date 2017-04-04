@@ -5,6 +5,7 @@
 @stop
 
 @section('content')
+    @include('dashboard.layouts.ticket-header')
     @include('ticketit::shared.header')
     @include('ticketit::tickets.index')
 @stop

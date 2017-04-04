@@ -7,9 +7,9 @@
 @stop
 @section('content')
 
-<div class="preloader">
+{{-- <div class="preloader">
     <div class="loader_img"><img src="img/loading.gif" alt="loading..." height="64" width="64"></div>
-</div> 
+</div>  --}}
 <div class="container">
     <div class="row " id="form-login">
 
@@ -20,7 +20,7 @@
                        <h2 class="text-center">
                            Sign Up
                            <small> with</small>
-                           <a href="/"><img src="img/pages/logo.png" alt="logo"></a>
+                           <a href="/"><img src="img/nibmtrans.png" alt="NIBM logo"></a>
                        </h2>
                    </div>
                </div>

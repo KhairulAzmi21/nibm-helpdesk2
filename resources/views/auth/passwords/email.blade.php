@@ -7,13 +7,13 @@
 @stop
 @section('content')
 
-<div class="preloader">
+{{-- <div class="preloader">
     <div class="loader_img"><img src="img/loading.gif" alt="loading..." height="64" width="64"></div>
-</div> 
+</div>  --}}
 <div class="container"> 
     <div class="row">
         <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-10 col-xs-offset-1 box animated fadeInUp">
-            <div class="text-center"><a href="/"><img src="img/pages/logo_gray.png" alt="coreplus logo"></a></div>
+            <div class="text-center"><a href="/"><img src="{{ asset('img/nibmtrans.png') }}" alt="NIBM Logo"></a></div>
             <h3 class="text-center">Forgot Password
             </h3>
              @if (session('status'))
