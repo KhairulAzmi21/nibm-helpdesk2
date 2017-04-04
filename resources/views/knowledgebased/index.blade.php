@@ -12,7 +12,7 @@
 		                        <input type="text" class="form-control" placeholder="Search Knowledge Based">
 		                        <span class="input-group-btn">
 		                            <button class="btn btn-default" type="button">
-		                                <span class="glyphicon glyphicon-search"></span>
+		                                <span class="fa fa-search"></span>
 		                        </button>
 		                        </span>
 		                    </div>
