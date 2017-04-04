@@ -5,7 +5,7 @@
 @stop
 
 @section('dashboard')
-        <link href="{{ asset('css/core_css/dashboard.css')}}" rel="stylesheet" type="text/css"/>
+        
 @stop
 
 @section('content')

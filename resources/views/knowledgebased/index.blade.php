@@ -33,29 +33,34 @@
 			                    Knowledge Based Archives
 			                </h1>
 			            </div>
+			            
 
-			            @foreach($categories as $category)
-			            <div class="col-md-4">
-			                <div class="panel panel-default">
-			                    <div class="panel-heading">
-			                        <h4><i class="fa fa-fw fa-check"></i>{{ $category->name }}</h4>
-			                    </div>
-			                    
-			                    <div class="panel-body">
-			                       <ul class="list-unstyled">
-			                       	       @foreach($category->knowledge_based as $article)
-			                                <li><a href="/knowledgebase/{{ $article->id }} ">{{ $article->title}}</a></li>
-			                                @endforeach
-			                               
-		                                     </ul>
-			                    </div>
-			                </div>
-			            </div>
-			            @endforeach
+			 
 			           
 			        </div>
 			        <!-- /.row -->
-
+				@foreach($categories as $category)
+				  
+				   <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+				  <div class="panel panel-default">
+				    <div class="panel-heading" role="tab" id="headingOne">
+				      <h4 class="panel-title">
+				        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{$category->id}}" aria-expanded="true" aria-controls="collapseOne">
+				          {{ $category->name }}
+				        </a>
+				      </h4>
+				    </div>
+				    <div id="collapse{{$category->id}}" class="panel-collapse collapse out" role="tabpanel" aria-labelledby="headingOne">
+				      <div class="panel-body">
+				          @foreach($category->knowledge_based as $article)
+			                                <li><a href="/knowledgebase/{{ $article->id }} ">{{ $article->title}}</a></li>
+			                      @endforeach
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				
+				@endforeach
 		             </div>
 		             <!-- Blog Categories Well -->
 		             <div class="col-lg-4">

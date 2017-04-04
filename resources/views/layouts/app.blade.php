@@ -15,12 +15,12 @@
      <link href="{{ asset('css/core_css/app.css')}}" rel="stylesheet" type="text/css"/>
     <!-- end of global css -->
     <!--page level css -->
-
+    
     <link href="{{ asset('css/core_css/awesome-bootstrap-checkbox.css')}}" rel="stylesheet" type="text/css"/>
   
     <link rel="stylesheet" type="text/css" href="{{ asset('css/core_css/custom.css')}}">
-
-    @yield('dashboard')
+    <link href="{{ asset('css/core_css/dashboard.css')}}" rel="stylesheet" type="text/css"/>
+   
      <link href="{{ asset('css/core_css/font-awesome.min.css')}}" rel="stylesheet" type="text/css"/>
     <!--end of page level css-->
 </head>
