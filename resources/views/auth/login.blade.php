@@ -18,8 +18,7 @@
                 <div class="col-md-12">
                     <div class="header">
                         <h2 class="text-center">
-                            Login
-                            <small> with</small>
+                            {{ trans('helpdesk.login_with')}}   
                             <a href="/"><img src="img/nibmtrans.png" alt="logo"></a>
                         </h2>
                     </div>
@@ -33,7 +32,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group ">
-                                    <label class="control-label" for="email">EMAIL</label>
+                                    <label class="control-label" for="email">{{ trans('helpdesk.email')}}</label>
                                     <div class="input-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                         <input type="text" placeholder="Email Address" class="form-control"
                                                name="email" id="email" value="{{ old('email') }}" required autofocus>
@@ -49,7 +48,7 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group ">
-                                    <label class="control-label" for="password">PASSWORD</label>
+                                    <label class="control-label" for="password">{{ trans('helpdesk.password') }}</label>
                                      <div class="input-group{{ $errors->has('password') ? ' has-error' : '' }}">
                                         <input type="password" placeholder="Password" class="form-control"
                                                name="password" id="password" required />
@@ -64,14 +63,14 @@
                         </div>
                         <div class="form-group">
                                 <input type="checkbox" name="remember" id="remember"> &nbsp;
-                            <label for="remember"> Remember Me </label>
-                            <a href="{{ route('password.request') }}" id="forgot" class="text-primary forgot1 pull-right"> Forgot Password? </a>
+                            <label for="remember"> {{ trans('helpdesk.remember_me') }}</label>
+                            <a href="{{ route('password.request') }}" id="forgot" class="text-primary forgot1 pull-right">{{ trans('helpdesk.forgot_password')}} </a>
                         </div>
                         <div class="form-group ">
                             <input type="submit" value="Login" class="btn btn-primary login-btn"/>
                             <br>
                             <hr>
-                            <span> New to NIBM Helpdesk?<a href="{{ route('register')}}"> Sign Up</a></span>
+                            <span> {{trans('helpdesk.new_to_nibm')}}<a href="{{ route('register')}}"> {{ trans('helpdesk.sign_up')}}</a></span>
                         </div>
                     </form>
                 </div>
