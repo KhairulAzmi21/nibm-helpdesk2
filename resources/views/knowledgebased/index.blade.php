@@ -1,11 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
+@include('ticketit::shared.assets')
+@include('ticketit::shared.errors')
+	  <div class="jumbotron" >
+		  <div class="container">
+		    <h1>Knowledge Base</h1>      
+		    <p>A place to find solution to your question</p>
+		   </div>
+	  </div>
+     
 	<div class="container">
 		<div class="row">
-
-			<div class="col-md-8">
-			    <h2>Knowledge Based</h2>
+			<div class="col-md-8">			   
 		                <!-- Search Knowledge Based-->
 		                <div class="well">		  
 		                    <div class="input-group">

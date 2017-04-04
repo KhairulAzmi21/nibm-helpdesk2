@@ -1,6 +1,6 @@
 <header class="header">
     <nav class="navbar navbar-static-top" role="navigation">
-        <a href="index.html" class="logo">
+        <a href="/" class="logo">
             <!-- Add the class icon to your logo image or logo icon to add the marginin -->
             <img src="{{asset('img/nibmtrans.png') }}" alt="logo"/>
         </a>
@@ -21,8 +21,8 @@
                 
                 <!-- User Account: style can be found in dropdown-->
                   @if (Auth::guest())
-                            <li><a href="{{ route('login') }}">Login</a></li>
-                            <li><a href="{{ route('register') }}">Register</a></li>
+                            <li><a style="color: #ffffff; font-weight: bold;" href="{{ route('login') }}">Login</a></li>
+                            <li><a style="color: #ffffff; font-weight: bold;" href="{{ route('register') }}">Register</a></li>
                 @else
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle padding-user" data-toggle="dropdown">

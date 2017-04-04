@@ -25,6 +25,28 @@
 
     <link href="{{ asset('css/core_css/dashboard.css')}}" rel="stylesheet" type="text/css"/>
      <link href="{{ asset('css/core_css/font-awesome.min.css')}}" rel="stylesheet" type="text/css"/>
+     <style type="text/css">
+a.nav-link:link
+{
+   color: #fb3f00;
+   text-decoration: none;
+}
+a.nav-link:visited
+{
+   color: #fb3f00;
+   text-decoration: none;
+}
+a.nav-link:hover
+{
+   color: #fb3f00;
+   text-decoration: none;
+}
+a.nav-link:active
+{
+   color: #fb3f00;
+   text-decoration: none;
+}
+     </style>
     <!--end of page level css-->
 </head>
 <body class="skin-coreplus">

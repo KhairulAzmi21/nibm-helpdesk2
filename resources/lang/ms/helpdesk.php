@@ -7,6 +7,10 @@ return [
     'new_to_nibm' => 'Tiada akaun NIBM HELPDESK?',
     'sign_up' => 'DAFTAR',
     'remember_me' => 'Ingat Saya',
-    'login_with' => 'Log Dengan'
+    'login_with' => 'Log Dengan',
+
+      //knowledge based
+     'kb_created' => 'Article berjaya dicipta',
+     'created_at' => 'Dicipta Pada'
 
 ];

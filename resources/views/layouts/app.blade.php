@@ -15,11 +15,11 @@
      <link href="{{ asset('css/core_css/app.css')}}" rel="stylesheet" type="text/css"/>
     <!-- end of global css -->
     <!--page level css -->
-    
+    <link href="{{ asset('css/core_css/dashboard.css')}}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('css/core_css/awesome-bootstrap-checkbox.css')}}" rel="stylesheet" type="text/css"/>
   
     <link rel="stylesheet" type="text/css" href="{{ asset('css/core_css/custom.css')}}">
-    <link href="{{ asset('css/core_css/dashboard.css')}}" rel="stylesheet" type="text/css"/>
+
    
      <link href="{{ asset('css/core_css/font-awesome.min.css')}}" rel="stylesheet" type="text/css"/>
     <!--end of page level css-->
@@ -28,20 +28,21 @@
 <div class="preloader">
     <div class="loader_img"><img src="{{asset('img/loading.gif')}}" alt="loading..." height="64" width="64"></div>
 </div> 
-@include('dashboard.layouts.nav')
+            @include('dashboard.layouts.nav')
             <div class="wrapper row-offcanvas row-offcanvas-left">
             @if(!Auth::guest())
             @include('dashboard.layouts.leftsidebar')
-            @endif
-                
-                <aside class="right-side">
+            <aside class="right-side">
                     <!-- Content Header (Page header) -->
                     {{-- @include('dashboard.layouts.header') --}}
                     <!--section ends-->
+            @endif
                 @yield('content')
-                <!-- /#right --> </section>
-        <!-- /.content --> </aside>
-    <!-- /.right-side --> </div>
+            @if(!Auth::guest())
+                <!-- /#right  </section>-->
+                <!-- /.content --> </aside>
+            <!-- /.right-side --> </div>
+            @endif
 
 <!-- global js -->
 <div id="qn"></div>

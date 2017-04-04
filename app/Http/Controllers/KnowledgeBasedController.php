@@ -50,6 +50,7 @@ class KnowledgeBasedController extends Controller
             'title' => request('title'),
             'body' => request('body')
             ]);
+        session()->flash('status', trans('helpdesk.kb_created'));
         return redirect('/category');
     }
 

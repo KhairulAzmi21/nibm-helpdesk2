@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+@include('ticketit::shared.assets')
+@include('ticketit::shared.errors')
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">

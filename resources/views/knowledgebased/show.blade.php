@@ -6,16 +6,13 @@
 	<div class="container">
 		<div class="row">
 		    <div class="col-md-12">
-			<div class="panel panel-default">
-			  <div class="panel-heading">
-			    <h3 class="panel-title">{{ $knowledgebase->title }}</h3>
-			  </div>
-			  <div class="panel-body">
-			    {!! $knowledgebase->body !!} 
-			 </div>
-			</div>
-		     </div>
+		    	<h1>{{ $knowledgebase->title }}</h1>
+		    	<small>{{ trans('helpdesk.created_at')}} <em> {{ $knowledgebase->created_at }} </em> </small>
+			<hr>
+			<p> {!! $knowledgebase->body !!}  </p>
+			<hr>
 			
+		     </div>			
                          </div>
 	</div>
 @endsection
