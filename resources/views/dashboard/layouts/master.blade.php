@@ -29,7 +29,7 @@
 </head>
 <body class="skin-coreplus">
 <div class="preloader">
-    <div class="loader_img"><img src="img/loading.gif" alt="loading..." height="64" width="64"></div>
+    <div class="loader_img"><img src="{{ asset('img/loading.gif') }}" alt="loading..." height="64" width="64"></div>
 </div> 
 @include('dashboard.layouts.nav')
      <div class="wrapper row-offcanvas row-offcanvas-left">

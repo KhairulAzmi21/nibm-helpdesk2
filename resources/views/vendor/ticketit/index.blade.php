@@ -59,5 +59,77 @@
 	            @endif
 	        ]
 	    });
+
+	   // top sales visits and income widgets gradient
+
+    var granimInstance1 = new Granim({
+        element: '#canvas-interactive1',
+        name: 'interactive-gradient1',
+        elToSetClassOn: '.canvas-interactive-wrapper1',
+        direction: 'diagonal',
+        opacity: [1, 1],
+        isPausedWhenNotInView: true,
+        states: {
+            "default-state": {
+                gradients: [
+                    ['#834d9b', '#d04ed6'],
+                    ['#1CD8D2', '#93EDC7']
+                ],
+                transitionSpeed: 12000
+            }
+        }
+    });
+    var granimInstance2 = new Granim({
+        element: '#canvas-interactive2',
+        name: 'interactive-gradient2',
+        elToSetClassOn: '.canvas-interactive-wrapper2',
+        direction: 'diagonal',
+        opacity: [1, 1],
+        isPausedWhenNotInView: true,
+        states: {
+            "default-state": {
+                gradients: [
+                    ['#834d9b', '#d04ed6'],
+                    ['#1CD8D2', '#93EDC7']
+                ],
+                transitionSpeed: 12000
+            }
+        }
+    });
+    var granimInstance3 = new Granim({
+        element: '#canvas-interactive3',
+        name: 'interactive-gradient3',
+        elToSetClassOn: '.canvas-interactive-wrapper3',
+        direction: 'diagonal',
+        opacity: [1, 1],
+        isPausedWhenNotInView: true,
+        states: {
+            "default-state": {
+                gradients: [
+                    ['#834d9b', '#d04ed6'],
+                    ['#1CD8D2', '#93EDC7']
+                ],
+                transitionSpeed: 12000
+            }
+        }
+    });
+    var granimInstance4 = new Granim({
+        element: '#canvas-interactive4',
+        name: 'interactive-gradient4',
+        elToSetClassOn: '.canvas-interactive-wrapper4',
+        direction: 'diagonal',
+        opacity: [1, 1],
+        isPausedWhenNotInView: true,
+        states: {
+            "default-state": {
+                gradients: [
+                    ['#834d9b', '#d04ed6'],
+                    ['#1CD8D2', '#93EDC7']
+                ],
+                transitionSpeed: 12000
+            }
+        }
+    });
+    // top sales visits and income widgets gradient ends
 	</script>
 @append

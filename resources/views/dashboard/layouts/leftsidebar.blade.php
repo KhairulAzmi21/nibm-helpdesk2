@@ -35,8 +35,14 @@
                         </div>
                     </div>
                 </div>
-                @if($u->isAdmin())
+                
                 <ul class="navigation">
+                    <li>
+                        <a href="{{ action('\Kordy\Ticketit\Controllers\TicketsController@create') }}">
+                            <i class="menu-icon fa fa-fw fa-pencil-square"></i>
+                            <span class="mm-text ">{{ trans('ticketit::lang.btn-create-new-ticket') }}</span>
+                        </a>
+                    </li>
                     <li>
                         <a href="{{ action('\Kordy\Ticketit\Controllers\TicketsController@index') }}">
                             <i class="menu-icon fa fa-fw fa-envelope-open"></i>
@@ -49,6 +55,7 @@
                             <span class="mm-text ">{{ trans('ticketit::lang.nav-completed-tickets') }}</span>
                         </a>
                     </li>
+                    @if($u->isAdmin())
                     <li class="active" id="active">
                         <a href="{{ action('\Kordy\Ticketit\Controllers\TicketsController@indexComplete') }}">
                             <i class="menu-icon fa fa-fw fa-home"></i>
@@ -100,6 +107,7 @@
                             </li>
                         </ul>
                     </li>
+                    @endif
                     <li>
                         <a href="{{ route('category.index') }}">
                             <i class="menu-icon fa fa-fw fa-home"></i>
@@ -109,7 +117,7 @@
             
                    
                 </ul>
-                @endif
+                
                 <!-- / .navigation --> </div>
             <!-- menu --> </section>
         <!-- /.sidebar --> </aside>
