@@ -578,11 +578,11 @@ a {
 .content-header h1 {
   font-size: 22px;
   line-height: 1.5; }
-
+/*error*/
 .badge {
   background-color: #48CFAD;
   font-weight: 400;
-  float: right; }
+  }
 
 .sub-menu {
   list-style: none;
@@ -602,7 +602,7 @@ a {
 #menu .menu-dropdown > ul,
 #menu .menu-dropdown-open-ul {
   background: #2a2e36; }
-
+  /* error */
 #menu .navigation .menu-icon {
   display: inline-block;
   margin-right: 5px;
@@ -624,6 +624,7 @@ a {
   font-size: 13px;
   line-height: 20px;
   padding: 11px 14px; }
+
 
 /******* END LEFT SIDEBAR *****/
 /********* 5. MAIN WRAPPER STYLES *********/
@@ -754,263 +755,7 @@ body > .header .navbar .sidebar-toggle {
 .m-t-25 {
   margin-top: 25px; }
 
-/*
-Customized Bootstrap toastr
-*/
-.radio,
-.checkbox {
-  display: inline;
-  min-height: 0;
-  margin-top: 10px;
-  margin-bottom: 10px; }
 
-div.radio,
-div.checker {
-  margin-right: 0;
-  margin-left: 3px; }
-
-div.selector,
-div.checker,
-div.button,
-div.uploader {
-  display: -moz-inline-box;
-  display: inline-block;
-  zoom: 1;
-  vertical-align: middle; }
-
-.resize_vertical {
-  resize: vertical; }
-
-.input-group-addon {
-  background-color: #dcdcdc;
-  border: 1px solid #ccc; }
-
-.m-t-6 {
-  margin-top: 6px; }
-
-.dataTables_length {
-  margin-top: 10px; }
-
-.chartWindow {
-  border-radius: 5px;
-  border: 1px solid #e5e5e5;
-  margin-bottom: 15px;
-  overflow-x: auto; }
-
-.multiselect-container > li > a {
-  padding: 5px; }
-
-.btn_selection {
-  margin: 3px 0; }
-
-body.fixed-layout > .header,
-body.fixed-layout .left-side,
-body.fixed-layout .navbar {
-  position: fixed; }
-
-body.fixed-layout > .header {
-  top: 0;
-  right: 0;
-  left: 0; }
-
-body.fixed-layout .navbar {
-  left: 0;
-  right: 0; }
-
-body.fixed-layout .wrapper {
-  margin-top: 50px; }
-
-.padding-top {
-  padding-top: 50px; }
-
-body.fixed-top > .header {
-  position: fixed; }
-
-.sub-submenu {
-  padding-left: 20px !important; }
-
-/*image-magnifier*/
-.img_height {
-  height: 200px; }
-
-/* layout css ends*/
-.ion-email {
-  font-size: 17px; }
-
-.stylehtml {
-  background: url("../img/brick-wall.png") repeat; }
-
-/**** 8.MEDIA QUERIES ****/
-@media screen and (min-width: 993px) {
-  .left-side {
-    top: 51px; }
-  /*Right side strech mode*/
-  .right-side.strech {
-    margin-left: 0; }
-  /* Left side collapse */
-  .left-side.collapse-left {
-    left: -250px; } }
-
-/*Give content full width on xs screens*/
-@media screen and (max-width: 992px) {
-  .right-side {
-    margin-left: 0; } }
-
-/*
-* Off Canvas
-* --------------------------------------------------
-*  Gives us the push menu effect
-*/
-@media screen and (max-width: 992px) {
-  .relative {
-    position: relative; }
-  .row-offcanvas-right .sidebar-offcanvas {
-    right: -250px; }
-  .row-offcanvas-left .sidebar-offcanvas {
-    left: -250px; }
-  .row-offcanvas-right {
-    right: 250px; }
-  .row-offcanvas-left {
-    left: 250px; }
-  .sidebar-offcanvas {
-    left: 0; }
-  body.fixed .sidebar-offcanvas {
-    margin-top: 50px;
-    left: -250px; }
-  body.fixed .row-offcanvas-left .navbar {
-    left: 250px;
-    right: 0; }
-  body.fixed .row-offcanvas-left .sidebar-offcanvas {
-    left: 0; } }
-
-@media screen and (max-width: 767px) {
-  .right-side > .content-header > .breadcrumb {
-    position: relative;
-    margin-top: 5px;
-    top: 0;
-    right: 0;
-    float: none; }
-  .navbar .navbar-nav > li {
-    float: left; }
-  .navbar-nav {
-    margin: 0;
-    float: left; }
-  .navbar-nav > li > a {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    line-height: 20px; }
-  .navbar .navbar-right {
-    float: right; } }
-
-/* Fix dropdown menu for small screens to display correctly on small screens */
-@media screen and (max-width: 767px) {
-  .navbar-nav > .notifications-menu > .dropdown-menu,
-  .navbar-nav > .user-menu > .dropdown-menu,
-  .navbar-nav > .tasks-menu > .dropdown-menu,
-  .navbar-nav > .messages-menu > .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: -120px;
-    left: auto;
-    background: #ffffff; }
-  .navbar-nav > .user-menu > .dropdown-menu {
-    right: 0; } }
-
-@media (max-width: 767px) {
-  .navbar-nav .user-menu .dropdown-menu > li > a {
-    padding: 3px 20px; }
-  body > .header .navbar {
-    padding-left: 20px;
-    padding-right: 20px; } }
-
-/* Fix menu positions on xs screens to appear correctly and fully */
-@media screen and (min-width: 550px) {
-  .skin-coreplus .navbar .navbar-right > .nav {
-    margin-right: 15px; } }
-
-@media screen and (max-width: 561px) {
-  .rightsidebar-right .rightsidebar-right-content .rightsidebar-right-heading.rightsidebar-right-heading-first {
-    padding-top: 120px; }
-  .rightsidebar-without-nav-small {
-    padding-top: 70px !important; } }
-
-@media screen and (max-width: 480px) {
-  .navbar-nav > .notifications-menu > .dropdown-menu > li.header:after,
-  .navbar-nav > .tasks-menu > .dropdown-menu > li.header:after,
-  .navbar-nav > .messages-menu > .dropdown-menu > li.header:after {
-    border-width: 0; }
-  .navbar-nav > .tasks-menu > .dropdown-menu {
-    position: absolute;
-    right: -120px;
-    left: auto; }
-  .navbar-nav > .notifications-menu > .dropdown-menu {
-    position: absolute;
-    right: -145px;
-    left: auto; }
-  .navbar-nav > .messages-menu > .dropdown-menu {
-    position: absolute;
-    right: -225px;
-    left: auto; } }
-
-@media screen and (max-width: 560px) {
-  body > .header {
-    position: relative; }
-  body > .header .logo,
-  body > .header .navbar {
-    width: 100%;
-    float: none;
-    position: relative;
-    height: initial; }
-  body > .header .navbar {
-    margin: 0; }
-  body.fixed > .header {
-    position: fixed; }
-  body.fixed > .wrapper,
-  body.fixed .sidebar-offcanvas {
-    margin-top: 100px; }
-  body.nav-fixed #right {
-    top: 60px; }
-  body.nav-fixed #menu {
-    position: relative;
-    top: 80px; } }
-
-/*SKINS CSS*/
-@media (min-width: 768px) {
-  body.boxed,
-  body.boxed .Footer,
-  body.boxed .navbar.navbar-fixed-top {
-    max-width: 650px;
-    margin-left: auto;
-    margin-right: auto; } }
-
-@media (min-width: 1024px) {
-  body.boxed,
-  body.boxed .Footer,
-  body.boxed .navbar.navbar-fixed-top {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto; } }
-
-@media (min-width: 1200px) {
-  body.boxed,
-  body.boxed .Footer,
-  body.boxed .navbar.navbar-fixed-top {
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto; } }
-
-@media only screen and (max-width: 768px) {
-  .grid-selection2 {
-    margin-top: 22px; } }
-
-@media only screen and (max-width: 425px) {
-  .grid-selection1 {
-    margin-top: 22px; } }
-
-@media (min-width: 1440px) and (max-width: 2560px) {
-  #menu .menu-dropdown > ul,
-  #menu .menu-dropdown-open-ul {
-    margin-top: -1px; } }
 
 /****** END MEDIA QUERIES ****/
 /****** 9.PRELOADER ****/
