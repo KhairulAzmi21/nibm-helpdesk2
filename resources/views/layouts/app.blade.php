@@ -20,7 +20,7 @@
   
     <link rel="stylesheet" type="text/css" href="{{ asset('css/core_css/custom.css')}}">
 
-    <link href="{{ asset('css/core_css/dashboard.css')}}" rel="stylesheet" type="text/css"/>
+    @yield('dashboard')
      <link href="{{ asset('css/core_css/font-awesome.min.css')}}" rel="stylesheet" type="text/css"/>
     <!--end of page level css-->
 </head>

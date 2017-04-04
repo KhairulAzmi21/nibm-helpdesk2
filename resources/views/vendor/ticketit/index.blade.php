@@ -4,6 +4,10 @@
     {{ trans('ticketit::lang.index-title') }}
 @stop
 
+@section('dashboard')
+        <link href="{{ asset('css/core_css/dashboard.css')}}" rel="stylesheet" type="text/css"/>
+@stop
+
 @section('content')
     @include('dashboard.layouts.ticket-header')
     @include('ticketit::shared.header')
