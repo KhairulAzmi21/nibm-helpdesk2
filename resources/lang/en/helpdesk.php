@@ -11,7 +11,8 @@ return [
 
     //knowledge based
      'kb_created' => 'Article has been created',
-     'created_at' => 'Created at'
+     'created_at' => 'Created at',
+     'knowledgebase' => 'Knowledge Base'
 
 
 ];

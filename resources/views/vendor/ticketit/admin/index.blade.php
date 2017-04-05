@@ -8,7 +8,7 @@
     @include('ticketit::shared.header')
     @if($tickets_count)
         <div class="row">
-            <div class="col-lg-3 col-md-4 col-lg-offset-1">
+            <div class="col-lg-3 col-md-4 col-lg-offset-2">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
                         <div class="row">
@@ -24,7 +24,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-4">
-                <div class="panel panel-danger">
+                <div class="panel panel-success">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-3" style="font-size: 5em;">
@@ -39,7 +39,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-4">
-                <div class="panel panel-success">
+                <div class="panel panel-danger">
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-xs-3" style="font-size: 5em;">

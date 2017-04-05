@@ -3,12 +3,14 @@
 @section('content')
 @include('ticketit::shared.assets')
 @include('ticketit::shared.errors')
+	  @if(Auth::guest())
 	  <div class="jumbotron" >
 		  <div class="container">
 		    <h1>Knowledge Base</h1>      
 		    <p>A place to find solution to your question</p>
 		   </div>
 	  </div>
+	  @endif
      
 	<div class="container">
 		<div class="row">

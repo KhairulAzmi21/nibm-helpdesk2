@@ -16,6 +16,7 @@
     <!-- end of global css -->
     <!--page level css -->
     <link href="{{ asset('css/core_css/dashboard.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{ asset('css/flag-icon.min.css')}}" rel="stylesheet" type="text/css"/>
     <link href="{{ asset('css/core_css/awesome-bootstrap-checkbox.css')}}" rel="stylesheet" type="text/css"/>
   
     <link rel="stylesheet" type="text/css" href="{{ asset('css/core_css/custom.css')}}">

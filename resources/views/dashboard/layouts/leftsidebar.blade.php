@@ -73,32 +73,32 @@
                         <ul class="sub-menu">
                             <li {!! (Request::is('tickets-admin/status') ? 'class="active"':"") !!}>
                                 <a href="{{ action('\Kordy\Ticketit\Controllers\StatusesController@index') }}">
-                                    <i class="fa fa-fw fa-fire"></i> {{ trans('ticketit::admin.nav-statuses') }}
+                                    <i class="fa fa-fw fa-question-circle"></i> {{ trans('ticketit::admin.nav-statuses') }}
                                 </a>
                             </li>
                             <li {!! (Request::is('tickets-admin/priority') ? 'class="active"':"") !!}>
                                  <a href="{{ action('\App\Http\Controllers\Ticketit\PrioritiesController@index') }}">
-                                    <i class="fa fa-fw fa-warning"></i> {{ trans('ticketit::admin.nav-priorities') }}
+                                    <i class="fa fa-fw fa-level-up"></i> {{ trans('ticketit::admin.nav-priorities') }}
                                 </a>
                             </li>
                             <li {!! (Request::is('tickets-admin/agent') ? 'class="active"':"") !!}>
                                 <a href="{{ action('\Kordy\Ticketit\Controllers\AgentsController@index') }}">
-                                    <i class="fa fa-fw fa-fire"></i>{{ trans('ticketit::admin.nav-agents') }}
+                                    <i class="fa fa-fw fa-users"></i> {{ trans('ticketit::admin.nav-agents') }}
                                 </a>
                             </li>
                             <li {!! (Request::is('tickets-admin/category') ? 'class="active"':"") !!}>
                                  <a href="{{ action('\Kordy\Ticketit\Controllers\CategoriesController@index') }}">
-                                    <i class="fa fa-fw fa-cog"></i> {{ trans('ticketit::admin.nav-categories') }}
+                                    <i class="fa fa-fw fa-tasks"></i> {{ trans('ticketit::admin.nav-categories') }}
                                 </a>
                             </li>
                             <li {!! (Request::is('tickets-admin/configuration') ? 'class="active"':"") !!}>
                                 <a href="{{ action('\Kordy\Ticketit\Controllers\ConfigurationsController@index') }}">
-                                    <i class="fa fa-fw fa-newspaper-o"></i> {{ trans('ticketit::admin.nav-configuration') }}
+                                    <i class="fa fa-fw fa-cog"></i> {{ trans('ticketit::admin.nav-configuration') }}
                                 </a>
                             </li>
                             <li {!! (Request::is('tickets-admin/administrator') ? 'class="active"':"") !!}>
                                 <a href="{{ action('\Kordy\Ticketit\Controllers\AdministratorsController@index')}}">
-                                    <i class="fa fa-fw fa-newspaper-o"></i> {{ trans('ticketit::admin.nav-administrator') }}
+                                    <i class="fa fa-fw fa-user-circle"></i> {{ trans('ticketit::admin.nav-administrator') }}
                                 </a>
                             </li>
                         </ul>
@@ -107,7 +107,7 @@
                     <li {!! (Request::is('category') ? 'class="active"':"") !!}>
                         <a href="{{ route('category.index') }}">
                             <i class="menu-icon fa fa-fw fa-home"></i>
-                            <span class="mm-text ">KnowledgeBase</span>
+                            <span class="mm-text ">{{ trans('helpdesk.knowledgebase')}}</span>
                         </a>
                     </li>
             

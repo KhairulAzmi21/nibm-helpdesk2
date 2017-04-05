@@ -287,7 +287,7 @@ body > .header .logo .icon {
 .navbar-nav > .notifications-menu > .dropdown-menu,
 .navbar-nav > .messages-menu > .dropdown-menu,
 .navbar-nav > .tasks-menu > .dropdown-menu {
-  width: 340px;
+  width: 40px;
   padding: 0;
   margin-top: 1px;
   top: 100%;
@@ -437,7 +437,7 @@ body > .header .logo .icon {
   text-align: center; }
 
 li.dropdown-title {
-  padding: 16px;
+  padding: 10px;
   background: #3d4e5d;
   font-size: 14px;
   color: #fff; }
@@ -519,7 +519,7 @@ li.dropdown-footer a {
   font-size: 17px; }
 
 .dropdown-messages {
-  min-width: 320px; }
+  min-width: 150px; }
 
 .dropdown-messages > li {
   border-bottom: 1px solid #F5F5F5; }

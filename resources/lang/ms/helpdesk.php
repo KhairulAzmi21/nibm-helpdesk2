@@ -11,6 +11,7 @@ return [
 
       //knowledge based
      'kb_created' => 'Article berjaya dicipta',
-     'created_at' => 'Dicipta Pada'
+     'created_at' => 'Dicipta Pada',
+     'knowledgebase' => 'Pangkalan Pengetahuan'
 
 ];

@@ -38,10 +38,14 @@ class KnowledgeBasedCategoryController extends Controller
      */
     public function store(Request $request)
     {
+        $this->validate($request, [
+        'name' => 'required|unique:knowledge_based_categories|max:255',
+        ]);
+
         KnowledgeBasedCategory::create([
             'name' => request('name'),
             ]);
-       
+        session()->flash('status', trans('New category has been created'));
         return redirect('/category');
     }
 
