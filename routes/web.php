@@ -26,6 +26,9 @@ Route::resource('/knowledgebase','KnowledgeBasedController');
 Route::get('/test',function(){
 	return view('dashboard.index2');
 });
+Route::get('/testa',function(){
+	return view('dashboard.index3');
+});
 
 
 Auth::routes();
