@@ -73,7 +73,7 @@ return [
 
 // tickets/____
 	'index-my-tickets' => 'Tiket Saya',
-	'btn-create-new-ticket' => 'Cipta Tiket Baru',
+	'btn-create-new-ticket' => 'Tambah Tiket Baru',
 	'index-complete-none' => 'Tiada Tiket yang Cukup',
 	'index-active-check' => 'Pastikan anda semak aktif tiket jika anda tidak dapat mencari tiket.',
 	'index-active-none' => 'Tiada Tiket Aktif,',
