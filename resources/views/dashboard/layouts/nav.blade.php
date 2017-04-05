@@ -18,17 +18,21 @@
             <ul class="nav navbar-nav">
                 <li class="dropdown messages-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown"> 
+                    @if(App::getLocale() == 'en')
                         <i class="flag-icon flag-icon-us flag-icon-squared"></i>
+                    @else
+                        <i class="flag-icon flag-icon-my flag-icon-squared"></i>
+                    @endif
                     </a>
                     <ul class="dropdown-menu dropdown-messages table-striped">
                         <li class="dropdown-title">Language</li>
                         <li>
-                            <a href="#" class="message striped-col">
+                            <a href="{{ route('lang.switch', 'en') }}" class="message striped-col">
                                English <i class="flag-icon flag-icon-us flag-icon-squared pull-right"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="#" class="message">
+                            <a href="{{ route('lang.switch', 'ms') }}" class="message">
                                 Malay <i class="flag-icon flag-icon-my flag-icon-squared pull-right"></i>
                             </a>
                         </li>    

@@ -30,7 +30,7 @@ Route::get('/testa',function(){
 	return view('dashboard.index3');
 });
 
-
+Route::get('lang/{lang}', ['as'=>'lang.switch', 'uses'=>'LanguageController@switchLang']);
 Auth::routes();
 
 Route::get('/home', function(){
