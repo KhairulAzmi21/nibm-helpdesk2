@@ -54,7 +54,9 @@
 
 <script src="{{ asset('js/core_js/dashboard.js')}}" type="text/javascript"></script>
 
+
 @yield('footer')
+@yield('search')
 
 </body>
 

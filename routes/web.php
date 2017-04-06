@@ -22,6 +22,7 @@ Route::get('/', function () {
 
 Route::resource('/category','KnowledgeBasedCategoryController');
 Route::resource('/knowledgebase','KnowledgeBasedController');
+Route::get('search/autocomplete', 'SearchKnowledgeBaseController@autocomplete');
 
 Route::get('/test',function(){
 	return view('dashboard.index2');

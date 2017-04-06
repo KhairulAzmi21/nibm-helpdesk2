@@ -16,9 +16,11 @@
 		<div class="row">
 			<div class="col-md-8">			   
 		                <!-- Search Knowledge Based-->
-		                <div class="well">		  
+		                <div class="well">		
+
+
 		                    <div class="input-group">
-		                        <input type="text" class="form-control" placeholder="Search Knowledge Based">
+		                        <input id="tags" type="text" class="form-control" placeholder="Search Knowledge Based">
 		                        <span class="input-group-btn">
 		                            <button class="btn btn-default" type="button">
 		                                <span class="fa fa-search"></span>
@@ -96,4 +98,22 @@
 		             <!-- /.row -->
                 </div>
 	</div>
+@stop
+@section('search')
+	
+	  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+	  <script>
+	  $( function() {
+	    
+	    $( "#tags" ).autocomplete({
+	      source: "search/autocomplete",
+		  minLength: 1,
+		  select: function(event, ui) {
+		  	
+		  	window.location.href = "knowledgebase/"+ui.item.id;
+		  }
+	    });
+	  } );
+	  </script>
 @endsection
