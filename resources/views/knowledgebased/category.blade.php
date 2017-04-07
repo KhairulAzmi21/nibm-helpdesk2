@@ -14,8 +14,35 @@
 					</div>
 					
 
-					<button type="submit" class="btn btn-primary">Submit</button>
+					<button type="submit" class="btn btn-primary pull-right">Submit</button>
 				</form>
+				<br><br><br>
+				<div class="panel panel-primary">
+
+		        			
+		
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Category Name</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						@foreach($categories as $category)
+						<tr>
+							<td style="vertical-align: middle">{{$category->name}}</td>
+							<td style="vertical-align: middle">
+								<a href="#" class="btn btn-info">Edit</a>
+								<a href="#" class="btn btn-danger">Delete</a>
+							</td>
+						</tr>
+						@endforeach
+					</tbody>
+				</table>
+				
+				</div>
+				
 			</div>
 		</div>
 	</div>

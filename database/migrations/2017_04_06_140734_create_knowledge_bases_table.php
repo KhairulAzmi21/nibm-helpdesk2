@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateKnowledgeBasedsTable extends Migration
+class CreateKnowledgeBasesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class CreateKnowledgeBasedsTable extends Migration
      */
     public function up()
     {
-        Schema::create('knowledge_baseds', function (Blueprint $table) {
+        Schema::create('knowledge_bases', function (Blueprint $table) {
             $table->increments('id');
-             $table->string('knowledge_based_categories_id');
+             $table->string('knowledge_base_category_id');
             $table->string('title');
             $table->longtext('body');
             $table->timestamps();
@@ -29,6 +29,6 @@ class CreateKnowledgeBasedsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('knowledge_baseds');
+        Schema::dropIfExists('knowledge_bases');
     }
 }

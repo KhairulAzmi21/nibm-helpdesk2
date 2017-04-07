@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\KnowledgeBasedCategory;
+use App\KnowledgeBaseCategory;
 use Illuminate\Http\Request;
 
-class KnowledgeBasedCategoryController extends Controller
+class KnowledgeBaseCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,7 @@ class KnowledgeBasedCategoryController extends Controller
      */
     public function index()
     {
-        $categories = KnowledgeBasedCategory::all();
-
-
+        $categories = KnowledgeBaseCategory::all();
         return view('knowledgebased.index',compact('categories'));
     }
 
@@ -27,7 +25,8 @@ class KnowledgeBasedCategoryController extends Controller
      */
     public function create()
     {
-        return view('knowledgebased.category');
+        $categories = KnowledgeBaseCategory::all();
+        return view('knowledgebased.category',compact('categories'));
     }
 
     /**
@@ -42,7 +41,7 @@ class KnowledgeBasedCategoryController extends Controller
         'name' => 'required|unique:knowledge_based_categories|max:255',
         ]);
 
-        KnowledgeBasedCategory::create([
+        KnowledgeBaseCategory::create([
             'name' => request('name'),
             ]);
         session()->flash('status', trans('New category has been created'));
@@ -52,10 +51,10 @@ class KnowledgeBasedCategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\KnowledgeBasedCategory  $knowledgeBasedCategory
+     * @param  \App\KnowledgeBaseCategory  $knowledgeBaseCategory
      * @return \Illuminate\Http\Response
      */
-    public function show(KnowledgeBasedCategory $knowledgeBasedCategory)
+    public function show(KnowledgeBaseCategory $knowledgeBaseCategory)
     {
         //
     }
@@ -63,10 +62,10 @@ class KnowledgeBasedCategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\KnowledgeBasedCategory  $knowledgeBasedCategory
+     * @param  \App\KnowledgeBaseCategory  $knowledgeBaseCategory
      * @return \Illuminate\Http\Response
      */
-    public function edit(KnowledgeBasedCategory $knowledgeBasedCategory)
+    public function edit(KnowledgeBaseCategory $knowledgeBaseCategory)
     {
         //
     }
@@ -75,10 +74,10 @@ class KnowledgeBasedCategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\KnowledgeBasedCategory  $knowledgeBasedCategory
+     * @param  \App\KnowledgeBaseCategory  $knowledgeBaseCategory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, KnowledgeBasedCategory $knowledgeBasedCategory)
+    public function update(Request $request, KnowledgeBaseCategory $knowledgeBaseCategory)
     {
         //
     }
@@ -86,10 +85,10 @@ class KnowledgeBasedCategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\KnowledgeBasedCategory  $knowledgeBasedCategory
+     * @param  \App\KnowledgeBaseCategory  $knowledgeBaseCategory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(KnowledgeBasedCategory $knowledgeBasedCategory)
+    public function destroy(KnowledgeBaseCategory $knowledgeBaseCategory)
     {
         //
     }

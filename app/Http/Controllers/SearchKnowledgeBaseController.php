@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Log;
 use DB;
-use App\KnowledgeBased;
+use App\KnowledgeBase;
 use Response;
 
 class SearchKnowledgeBaseController extends Controller
@@ -15,7 +15,7 @@ class SearchKnowledgeBaseController extends Controller
 	$tags = request()->input('term');
 	$results = array();
 	
-	$queries = KnowledgeBased::where('title', 'LIKE', '%'.$tags.'%')
+	$queries = KnowledgeBase::where('title', 'LIKE', '%'.$tags.'%')
 					->take(5)->get();
 	
 	foreach ($queries as $query)

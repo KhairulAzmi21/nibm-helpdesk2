@@ -66,8 +66,8 @@
 				      
 				      <div id="collapse{{$category->id}}" class="panel-collapse collapse">
 				        <ul class="list-group">
-				         @if($category->knowledge_based->isNotEmpty())
-				        @foreach($category->knowledge_based as $article)
+				         @if($category->knowledge_base->isNotEmpty())
+				        @foreach($category->knowledge_base as $article)
 				        	  <li class="list-group-item"><a href="/knowledgebase/{{ $article->id }} ">{{ $article->title}}</a></li>      
 			                      @endforeach
 			                      @else
@@ -86,11 +86,11 @@
 		             <div class="col-lg-4">
 		             	<h2>Article</h2>
 		                            <ul class="list-unstyled">
-		                                @foreach($categories as $category)
+		                               {{--  @foreach($categories as $category)
  		                                @foreach($category->knowledge_based as $article)
  			                                <li><a href="/knowledgebase/{{ $article->id }} ">{{ $article->title}}</a></li>
  			                     @endforeach
- 			                 @endforeach
+ 			                 @endforeach --}}
 		                                
 		                            </ul>
 		                        </div>		      

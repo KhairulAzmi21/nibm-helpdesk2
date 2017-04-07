@@ -20,8 +20,8 @@ Route::get('/', function () {
 });
 
 
-Route::resource('/category','KnowledgeBasedCategoryController');
-Route::resource('/knowledgebase','KnowledgeBasedController');
+Route::resource('/category','KnowledgeBaseCategoryController');
+Route::resource('/knowledgebase','KnowledgeBaseController');
 Route::get('search/autocomplete', 'SearchKnowledgeBaseController@autocomplete');
 
 Route::get('/test',function(){

@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\KnowledgeBasedCategory;
-use App\KnowledgeBased;
+use App\KnowledgeBase;
+use App\KnowledgeBaseCategory;
 use Illuminate\Http\Request;
 
-class KnowledgeBasedController extends Controller
+class KnowledgeBaseController extends Controller
 {
     public function __construct(){
     $this->middleware('auth', ['only' => ['create', 'store', 'edit', 'delete']]);
@@ -29,11 +29,16 @@ class KnowledgeBasedController extends Controller
      */
     public function create()
     {
-        $categories= KnowledgeBasedCategory::all();
+       
+        $categories= KnowledgeBaseCategory::all();
+
+        $knowledgebases = KnowledgeBase::all();
+       
             if($categories->isEmpty()){
                     return back();
             }
-        return view('knowledgebased.create',compact('categories'));
+
+        return view('knowledgebased.create',compact('categories','knowledgebases'));
     }
 
     /**
@@ -44,9 +49,10 @@ class KnowledgeBasedController extends Controller
      */
     public function store(Request $request)
     {
+        //dd($request);
       
-        KnowledgeBased::create([
-            'knowledge_based_category_id' => request('category'),
+        KnowledgeBase::create([
+            'knowledge_base_category_id' => request('category'),
             'title' => request('title'),
             'body' => request('body')
             ]);
@@ -60,7 +66,7 @@ class KnowledgeBasedController extends Controller
      * @param  \App\KnowledgeBased  $knowledgeBased
      * @return \Illuminate\Http\Response
      */
-    public function show(KnowledgeBased $knowledgebase)
+    public function show(KnowledgeBase $knowledgebase)
     {
          return view('knowledgebased.show',compact('knowledgebase'));
     }
@@ -68,10 +74,10 @@ class KnowledgeBasedController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\KnowledgeBased  $knowledgeBased
+     * @param  \App\KnowledgeBase  $knowledgeBase
      * @return \Illuminate\Http\Response
      */
-    public function edit(KnowledgeBased $knowledgeBased)
+    public function edit(KnowledgeBase $knowledgeBase)
     {
         //
     }
@@ -80,10 +86,10 @@ class KnowledgeBasedController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\KnowledgeBased  $knowledgeBased
+     * @param  \App\KnowledgeBase  $knowledgeBase
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, KnowledgeBased $knowledgeBased)
+    public function update(Request $request, KnowledgeBase $knowledgeBase)
     {
         //
     }
@@ -91,10 +97,10 @@ class KnowledgeBasedController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\KnowledgeBased  $knowledgeBased
+     * @param  \App\KnowledgeBase  $knowledgeBase
      * @return \Illuminate\Http\Response
      */
-    public function destroy(KnowledgeBased $knowledgeBased)
+    public function destroy(KnowledgeBase $knowledgeBase)
     {
         //
     }
