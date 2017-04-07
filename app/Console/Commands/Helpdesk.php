@@ -35,11 +35,20 @@ class Helpdesk extends Command
      *
      * @return mixed
      */
-    public function handle()
-    {
-          $name = $this->ask('What is your name?');
+    public function handle(){
+        $this->welcome();
+        // $this->createDatabase();
+        // $this->migrate();
+        // $this->registerAdmin();
+        // $this->enableTicketit();
+        // $this->setupTicketit();
+        // $this->installPresets();
+        // $this->setUpMail();
+        // $this->removeInstaller();
 
-          $userId = $this->info("your name is ".$name);
-
+    }
+     private function welcome(){
+        $this->line("Welcome to Nibm Helpdesk!\n");
+        $this->line("You can use Ctrl+C to exit the installer any time.\n");
     }
 }
