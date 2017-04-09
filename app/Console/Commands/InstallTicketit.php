@@ -6,7 +6,7 @@ use Illuminate\Console\Command;
 use Illuminate\Validation\Validator;
 use DB;
 use Kordy\Ticketit\Models\Configuration;
-use Kordy\Ticketit\Models\Priority;
+use App\Models\Priority;
 use Kordy\Ticketit\Models\Category;
 use Kordy\Ticketit\Models\Status;
 
@@ -282,16 +282,19 @@ class InstallTicketit extends Command
         Priority::create([
             "name"    => "High",
             "color"    => "#830909",
+            "days" => 20,
         ]);
 
         Priority::create([
             "name"    => "Normal",
             "color"    => "#090909",
+            "days" => 10,
         ]);
 
         Priority::create([
             "name"    => "Low",
             "color"    => "#125f71",
+            "days" => 5,
         ]);
 
         $supportCategory = Category::create([
