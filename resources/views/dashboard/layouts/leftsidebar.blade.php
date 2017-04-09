@@ -77,7 +77,7 @@
                                 </a>
                             </li>
                             <li {!! (Request::is('tickets-admin/priority') ? 'class="active"':"") !!}>
-                                 <a href="{{ action('\App\Http\Controllers\Ticketit\PrioritiesController@index') }}">
+                                 <a href="{{ action('\Kordy\Ticketit\Controllers\PrioritiesController@index') }}">
                                     <i class="fa fa-fw fa-level-up"></i> {{ trans('ticketit::admin.nav-priorities') }}
                                 </a>
                             </li>
