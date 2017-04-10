@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 use Kordy\Ticketit\Console\Htmlify;
-use Kordy\Ticketit\Controllers\InstallController;
+use App\Http\Controllers\Ticketit\InstallController;
 use Kordy\Ticketit\Controllers\NotificationsController;
 use Kordy\Ticketit\Controllers\ToolsController;
 use Kordy\Ticketit\Models\Agent;
