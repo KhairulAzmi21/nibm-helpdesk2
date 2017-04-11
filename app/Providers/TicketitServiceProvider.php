@@ -16,6 +16,7 @@ use Kordy\Ticketit\Models\Agent;
 use Kordy\Ticketit\Models\Comment;
 use Kordy\Ticketit\Models\Setting;
 use Kordy\Ticketit\Models\Ticket;
+use Kordy\Ticketit\Helpers\LaravelVersion;
 
 class TicketitServiceProvider extends ServiceProvider
 {
@@ -198,7 +199,7 @@ class TicketitServiceProvider extends ServiceProvider
             $this->loadViewsFrom(base_path('vendor/kordy/ticketit/src/Views'), 'ticketit');
             $this->publishes([base_path('vendor/kordy/ticketit/src/Migrations') => base_path('database/migrations')], 'db');
 
-            $authMiddleware = \App\Vendor\Kordy\Ticketit\src\Helpers\LaravelVersion::authMiddleware();
+            $authMiddleware = LaravelVersion::authMiddleware();
 
             Route::get('/tickets-install', [
                 'middleware' => $authMiddleware,
