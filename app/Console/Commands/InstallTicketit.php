@@ -17,7 +17,7 @@ class InstallTicketit extends Command
      *
      * @var string
      */
-    protected $signature = 'ticketit:install';
+    protected $signature = 'helpdesk:install';
 
     /**
      * The console command description.

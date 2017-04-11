@@ -11,7 +11,7 @@ class Helpdesk extends Command
      *
      * @var string
      */
-    protected $signature = 'helpdesk:install';
+    protected $signature = 'helpdeskww:install';
 
     /**
      * The console command description.

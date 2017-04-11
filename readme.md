@@ -6,17 +6,18 @@ Install this only if you'd like to install Ticketit as a standalone app. If you'
 
 ## Installation
 
-Open a terminal at the desired installation destination and run:
+Open a terminal at the desired installation destination and fork & clone this project:
 
 ```
-composer create-project --prefer-dist balping/ticketit-app ticketit
+
 ```
 
 This pulls in all necessary libraries. Then cd into the installation directory and run the install script:
 
 ```
-cd ticketit
-php artisan ticketit:install
+Create your database then .
+cd {{project name}}
+php artisan helpdesk:install
 ```
 
 This asks some questions (database parameters, admin account login details).
