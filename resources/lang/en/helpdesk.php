@@ -3,11 +3,15 @@
 return [
     'email' => 'EMAIL',
     'password' => 'PASSWORD',
+    'confirm-password' => 'PASSWORD CONFIRM',
     'forgot_password' => 'Forgot Password?',
     'new_to_nibm' => 'New to NIBM Helpdesk?',
     'sign_up' => 'REGISTER',
     'remember_me' => 'Remember Me',
     'login_with' => 'Login With',
+    'name' => "Name",
+    'have-account' => "Already Have an account?",
+    'helpdesk' => "Helpdesk",
 
     //knowledge based
      'kb_created' => 'Article has been created',

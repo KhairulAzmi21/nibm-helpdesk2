@@ -2,12 +2,16 @@
 
 return [
     'email' => 'EMAIL',
-    'password' => 'KATA KUNCI',
-    'forgot_password' => 'Lupa Kata Kunci?',
+    'password' => 'KATA LALUAN',
+    'confirm-password' => 'ULANG KATA LALUAN',
+    'forgot_password' => 'Lupa Kata Laluan?',
     'new_to_nibm' => 'Tiada akaun NIBM HELPDESK?',
     'sign_up' => 'DAFTAR',
     'remember_me' => 'Ingat Saya',
     'login_with' => 'Log Dengan',
+        'name' => "Nama",
+    'have-account' => "Sudah mendaftar?",
+      'helpdesk' => "Helpdesk",
 
       //knowledge based
      'kb_created' => 'Article berjaya dicipta',

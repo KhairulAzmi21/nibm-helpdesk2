@@ -33,9 +33,9 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                    <label class="control-label" for="user_name">NAME</label>
+                                    <label class="control-label" for="user_name">{{ trans('helpdesk.name')}}</label>
                                     <div class="input-group">
-                                        <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Name" required autofocus>
+                                        <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="{{ trans('helpdesk.name')}}" required autofocus>
 
 	                                @if ($errors->has('name'))
 	                                    <span class="help-block">
@@ -49,9 +49,9 @@
                         <div class="row">
                             <div class="col-sm-12">
                                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                    <label class="control-label" for="email">EMAIL</label>
+                                    <label class="control-label" for="email">{{ trans('helpdesk.email')}}</label>
                                     <div class="input-group">
-                                       <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="Email Address" required>
+                                       <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="{{ trans('helpdesk.email')}}" required>
 
 	                                @if ($errors->has('email'))
 	                                    <span class="help-block">
@@ -65,9 +65,9 @@
                         <div class="row password">
                             <div class="col-sm-6">
                                 <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                                    <label class="control-label" for="password">PASSWORD</label>
+                                    <label class="control-label" for="password">{{ trans('helpdesk.password')}}</label>
                                     <div class="input-group">
-                                        <input id="password" type="password" class="form-control" name="password" placeholder="" required>
+                                        <input id="password" type="password" class="form-control" name="password" placeholder="{{ trans('helpdesk.password')}}" required>
 
 		                                @if ($errors->has('password'))
 		                                    <span class="help-block">
@@ -79,9 +79,9 @@
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group cp-group">
-                                    <label class="control-label confirm_pwd" for="password_confirm">CONFIRM PASSWORD</label>
+                                    <label class="control-label confirm_pwd" for="password_confirm">{{ trans('helpdesk.confirm-password')}}</label>
                                     <div class="input-group pull-right">
-                                       <input id="password-confirm" type="password" class="form-control" placeholder="Confirm Password" name="password_confirmation" required>
+                                       <input id="password-confirm" type="password" class="form-control" placeholder="{{ trans('helpdesk.confirm-password')}}" name="password_confirmation" required>
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +91,7 @@
                                 <input type="submit" class="btn btn-primary" value="Sign Up"/>
                                 <input type="reset" class="btn btn-default" value="Reset" id="dee1"/><br>
                                 <hr>
-                                <span> Already Have an account? <a href="{{ route('login')}}">Login</a></span>
+                                <span> {{ trans('helpdesk.have-account')}} <a href="{{ route('login')}}">{{ trans('helpdesk.login')}}</a></span>
                         </div>
                     </form>
                 </div>

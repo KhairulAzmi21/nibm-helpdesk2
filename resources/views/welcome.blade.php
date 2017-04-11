@@ -29,12 +29,13 @@
       @include('dashboard.layouts.nav')
       <div class="jumbotron" >
           <div class="container">
-            <h1>{{ config('app.name') }} Helpdesk</h1>      
-            <p>A place to find solution to your question</p>
+            <h1>{{ config('app.name') }} {{ trans('helpdesk.helpdesk')}}</h1>      
+            <p>{{ trans('helpdesk.header')}}</p>
+         
             <p>
-              <a class="btn btn-primary btn-lg" href="/knowledgebases" role="button">Knowledge Base</a>
-              <a class="btn btn-success btn-lg" href="/login" role="button">Login</a>
-              <a class="btn btn-warning btn-lg" href="/register" role="button">Register</a>
+              <a class="btn btn-primary btn-lg" href="/knowledgebases" role="button">{{ trans('helpdesk.knowledgebase')}}</a>
+              <a class="btn btn-success btn-lg" href="/login" role="button">{{ trans('helpdesk.login')}}</a>
+              <a class="btn btn-warning btn-lg" href="/register" role="button">{{ trans('helpdesk.register')}}</a>
             </p>
           </div>
       </div>
