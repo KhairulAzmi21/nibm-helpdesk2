@@ -105,7 +105,7 @@
                     </li>
                     @endif
                     <li {!! (Request::is('category') ? 'class="active"':"") !!}>
-                        <a href="{{ route('category.index') }}">
+                        <a href="{{ asset('/knowledgebases') }}">
                             <i class="menu-icon fa fa-fw fa-home"></i>
                             <span class="mm-text ">{{ trans('helpdesk.knowledgebase')}}</span>
                         </a>

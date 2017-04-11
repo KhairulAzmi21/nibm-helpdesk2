@@ -3,19 +3,29 @@
 namespace App\Http\Controllers;
 
 use App\KnowledgeBaseCategory;
+use App\KnowledgeBase;
 use Illuminate\Http\Request;
 
 class KnowledgeBaseCategoryController extends Controller
 {
+    public function __construct(){
+    $this->middleware('auth')->except('landing');
+
+    }
+    public function landing(){
+         $categories = KnowledgeBaseCategory::all();
+        return view('knowledgebase.knowledgebase',compact('categories'));
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index()
     {
         $categories = KnowledgeBaseCategory::all();
-        return view('knowledgebased.index',compact('categories'));
+        return view('knowledgebase.category.index',compact('categories'));
     }
 
     /**
@@ -26,7 +36,7 @@ class KnowledgeBaseCategoryController extends Controller
     public function create()
     {
         $categories = KnowledgeBaseCategory::all();
-        return view('knowledgebased.category',compact('categories'));
+        return view('knowledgebase.category.create',compact('categories'));
     }
 
     /**
@@ -38,7 +48,7 @@ class KnowledgeBaseCategoryController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-        'name' => 'required|unique:knowledge_based_categories|max:255',
+        'name' => 'required|unique:knowledge_base_categories|max:255',
         ]);
 
         KnowledgeBaseCategory::create([
@@ -65,9 +75,9 @@ class KnowledgeBaseCategoryController extends Controller
      * @param  \App\KnowledgeBaseCategory  $knowledgeBaseCategory
      * @return \Illuminate\Http\Response
      */
-    public function edit(KnowledgeBaseCategory $knowledgeBaseCategory)
+    public function edit(KnowledgeBaseCategory $category)
     {
-        //
+        return view('knowledgebase.category.edit',compact('category'));
     }
 
     /**
@@ -77,9 +87,18 @@ class KnowledgeBaseCategoryController extends Controller
      * @param  \App\KnowledgeBaseCategory  $knowledgeBaseCategory
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, KnowledgeBaseCategory $knowledgeBaseCategory)
+    public function update(Request $request, KnowledgeBaseCategory $category)
     {
-        //
+       
+         $this->validate($request, [
+        'name' => 'required|unique:knowledge_base_categories|max:255',
+        ]);
+
+        KnowledgeBaseCategory::where('id',$category->id)
+                                                ->update(['name' => request('name')]);
+          
+        session()->flash('status', trans('Category successfully change'));
+        return redirect('/category');
     }
 
     /**
@@ -88,8 +107,15 @@ class KnowledgeBaseCategoryController extends Controller
      * @param  \App\KnowledgeBaseCategory  $knowledgeBaseCategory
      * @return \Illuminate\Http\Response
      */
-    public function destroy(KnowledgeBaseCategory $knowledgeBaseCategory)
+    public function destroy(KnowledgeBaseCategory $category)
     {
-        //
+        $article = KnowledgeBase::where('knowledge_base_category_id',$category->id)->update([
+                'knowledge_base_category_id' => null
+        ]);
+
+        KnowledgeBaseCategory::destroy($category->id);
+
+        session()->flash('status', trans('Successfully Delete Category'));
+        return redirect('/category');
     }
 }

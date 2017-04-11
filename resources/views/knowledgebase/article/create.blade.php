@@ -30,34 +30,7 @@
 
 					<button type="submit" class="btn btn-primary">Submit</button>
 				</form>
-				<div class="panel panel-primary">
-				<table class="table table-striped">
-					<thead>
-						<tr>
-							<th>Article Name</th>
-							<th>Category Name</th>
-							<th>Action</th>
-						</tr>
-					</thead>
-					<tbody>
-					 @foreach($knowledgebases as $know)
-						
-						
-						<tr>
-							<td style="vertical-align: middle">{{$know->title}}</td>
-
-							<td style="vertical-align: middle">{{$know->knowledge_base_category->name}}</td>
-							<td style="vertical-align: middle">
-								<a href="#" class="btn btn-info">Edit</a>
-								<a href="#" class="btn btn-danger">Delete</a>
-							</td>
-						</tr>
-						
-					@endforeach
-					</tbody>
-				</table>
 				
-				</div>
 			</div>
 		</div>
 	</div>

@@ -12,7 +12,9 @@ return [
     //knowledge based
      'kb_created' => 'Article has been created',
      'created_at' => 'Created at',
-     'knowledgebase' => 'Knowledge Base'
+     'knowledgebase' => 'Knowledge Base',
+     'list_knowledge_base' => 'List Knowledge Base',
+     'create_new_knowledge_based' => "Create Knowledge Base",
 
 
 ];

@@ -32,7 +32,7 @@
             <h1>{{ config('app.name') }} Helpdesk</h1>      
             <p>A place to find solution to your question</p>
             <p>
-              <a class="btn btn-primary btn-lg" href="/category" role="button">Knowledge Base</a>
+              <a class="btn btn-primary btn-lg" href="/knowledgebases" role="button">Knowledge Base</a>
               <a class="btn btn-success btn-lg" href="/login" role="button">Login</a>
               <a class="btn btn-warning btn-lg" href="/register" role="button">Register</a>
             </p>

@@ -31,9 +31,9 @@
 		                </div>
 		                @if (!Auth::guest())
 				
-		                	<a href="{{asset('category/create') }}" class="btn btn-success">Create New Category</a> 
+		                	<a href="{{route('category.index') }}" class="btn btn-success">Category</a> 
 		                	@if($categories->isNotEmpty())
-		                	<a href="{{asset('knowledgebase/create') }}" class="btn btn-primary ">Create New KB</a>
+		                	<a href="{{ route('knowledgebase.index') }}" class="btn btn-primary ">KnowledgeBase</a>
 		                	@endif
 
 		                @endif
@@ -84,15 +84,15 @@
 		             </div>
 		             <!-- Blog Categories Well -->
 		             <div class="col-lg-4">
-		             	<h2>Article</h2>
+{{-- 		             	<h2>Article</h2>
 		                            <ul class="list-unstyled">
-		                               {{--  @foreach($categories as $category)
+		                                @foreach($categories as $category)
  		                                @foreach($category->knowledge_based as $article)
  			                                <li><a href="/knowledgebase/{{ $article->id }} ">{{ $article->title}}</a></li>
  			                     @endforeach
- 			                 @endforeach --}}
+ 			                 @endforeach
 		                                
-		                            </ul>
+		                            </ul> --}}
 		                        </div>		      
 		             </div>
 		             <!-- /.row -->

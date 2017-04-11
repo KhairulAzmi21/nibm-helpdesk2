@@ -9,8 +9,7 @@ use Illuminate\Http\Request;
 class KnowledgeBaseController extends Controller
 {
     public function __construct(){
-    $this->middleware('auth', ['only' => ['create', 'store', 'edit', 'delete']]);
-
+    $this->middleware('auth')->except('show');
     }
     /**
      * Display a listing of the resource.
@@ -18,8 +17,10 @@ class KnowledgeBaseController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        //
+    {  
+        $categories= KnowledgeBaseCategory::all();
+        $knowledgebases = KnowledgeBase::all();
+        return view('knowledgebase.article.index',compact('categories','knowledgebases'));
     }
 
     /**
@@ -31,14 +32,13 @@ class KnowledgeBaseController extends Controller
     {
        
         $categories= KnowledgeBaseCategory::all();
-
         $knowledgebases = KnowledgeBase::all();
        
             if($categories->isEmpty()){
                     return back();
             }
 
-        return view('knowledgebased.create',compact('categories','knowledgebases'));
+        return view('knowledgebase.article.create',compact('categories','knowledgebases'));
     }
 
     /**
@@ -57,7 +57,7 @@ class KnowledgeBaseController extends Controller
             'body' => request('body')
             ]);
         session()->flash('status', trans('helpdesk.kb_created'));
-        return redirect('/category');
+        return redirect('/knowledgebase');
     }
 
     /**
@@ -68,7 +68,7 @@ class KnowledgeBaseController extends Controller
      */
     public function show(KnowledgeBase $knowledgebase)
     {
-         return view('knowledgebased.show',compact('knowledgebase'));
+         return view('knowledgebase.article.show',compact('knowledgebase'));
     }
 
     /**
@@ -77,9 +77,14 @@ class KnowledgeBaseController extends Controller
      * @param  \App\KnowledgeBase  $knowledgeBase
      * @return \Illuminate\Http\Response
      */
-    public function edit(KnowledgeBase $knowledgeBase)
+    public function edit(KnowledgeBase $knowledgebase)
     {
-        //
+        $categories= KnowledgeBaseCategory::all();
+            if($categories->isEmpty()){
+                    return back();
+            }
+
+        return view('knowledgebase.article.edit',compact('categories','knowledgebase'));
     }
 
     /**
@@ -89,9 +94,16 @@ class KnowledgeBaseController extends Controller
      * @param  \App\KnowledgeBase  $knowledgeBase
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, KnowledgeBase $knowledgeBase)
+    public function update(Request $request, KnowledgeBase $knowledgebase)
     {
-        //
+        $input = $request->all();
+        //return $input;
+        $update = KnowledgeBase::findOrfail($knowledgebase->id);
+        if($update->update($input)){
+             session()->flash('status', trans('Successfully Update Article'));
+            return redirect('/knowledgebase');
+        }
+   
     }
 
     /**
@@ -100,8 +112,11 @@ class KnowledgeBaseController extends Controller
      * @param  \App\KnowledgeBase  $knowledgeBase
      * @return \Illuminate\Http\Response
      */
-    public function destroy(KnowledgeBase $knowledgeBase)
+    public function destroy(KnowledgeBase $knowledgebase)
     {
-        //
+
+        KnowledgeBase::destroy($knowledgebase->id);
+        session()->flash('status', trans('Successfully Delete Article'));
+        return redirect('/knowledgebase');
     }
 }

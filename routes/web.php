@@ -19,7 +19,7 @@ Route::get('/', function () {
 	}
 });
 
-
+Route::get('/knowledgebases', 'KnowledgeBaseCategoryController@landing');
 Route::resource('/category','KnowledgeBaseCategoryController');
 Route::resource('/knowledgebase','KnowledgeBaseController');
 Route::get('search/autocomplete', 'SearchKnowledgeBaseController@autocomplete');
