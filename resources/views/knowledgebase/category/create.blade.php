@@ -9,12 +9,12 @@
 				<form action="{{ asset('category') }}" method="POST" role="form">
 					{{ csrf_field() }}
 					<div class="form-group">
-						<label for="name">Category Name</label>
-						<input type="text" class="form-control" id="name" name="name" placeholder="Input field">
+						<label for="name">{{ trans('helpdesk.category-name')}}</label>
+						<input type="text" class="form-control" id="name" name="name" >
 					</div>
 					
 
-					<button type="submit" class="btn btn-primary pull-right">Submit</button>
+					<button type="submit" class="btn btn-primary pull-right">{{ trans('helpdesk.btn-submit')}}</button>
 				</form>	
 			</div>
 		</div>

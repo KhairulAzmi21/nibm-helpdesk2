@@ -44,7 +44,7 @@ return [
 	'btn-close' => 'Tutup',
 	'btn-delete' => 'Padam',
 	'btn-edit' => 'Ubah',
-	'btn-mark-complete' => 'Tanda lengkap',
+	'btn-mark-complete' => 'Tanda Selesai',
 	'btn-submit' => 'Hantar',
 
 	'agent' => 'Ejen',
@@ -77,11 +77,11 @@ return [
 	'index-complete-none' => 'Tiada Tiket yang Cukup',
 	'index-active-check' => 'Pastikan anda semak aktif tiket jika anda tidak dapat mencari tiket.',
 	'index-active-none' => 'Tiada Tiket Aktif,',
-	'index-create-new-ticket' => 'Cipta Tiket Baru',
+	'index-create-new-ticket' => 'Tambah Tiket Baru',
 	'index-complete-check' => 'Pastikan anda semak tiket yang cukup jika anda tidak dapat mencari tiket.',
 
 	'create-ticket-title' => 'Borang Tiket Baru',
-	'create-new-ticket' => 'Cipta Tiket Baru',
+	'create-new-ticket' => 'Tambah Tiket Baru',
 	'create-ticket-brief-issue' => 'Ringkasan isu tiket',
 	'create-ticket-describe-issue' => 'Huraikan isu anda disini secara terperinci',
 
@@ -102,20 +102,20 @@ return [
 	'administrators-is-removed-from-team' => 'Buang Pentadbir :name from the administrators team', // New
 
 // CategoriesController
-	'category-name-has-been-created' => 'Kategori :name has been created!',
-	'category-name-has-been-modified' => 'Kategori :name has been modified!',
-	'category-name-has-been-deleted' => 'Kategori :name has been deleted!',
+	'category-name-has-been-created' => 'Kategori :name berjaya ditambah!',
+	'category-name-has-been-modified' => 'Kategori :name berjaya dikemaskini!',
+	'category-name-has-been-deleted' => 'Kategori :name berjaya dibuang!',
 
 // PrioritiesController
-	'priority-name-has-been-created' => 'Keutamaan :name has been created!',
-	'priority-name-has-been-modified' => 'Keutamaan :name has been modified!',
-	'priority-name-has-been-deleted' => 'Keutamaan :name has been deleted!',
+	'priority-name-has-been-created' => 'Keutamaan :name berjaya ditambah!',
+	'priority-name-has-been-modified' => 'Keutamaan :name berjaya dikemaskini!',
+	'priority-name-has-been-deleted' => 'Keutamaan :name berjaya dibuang!',
 	'priority-all-tickets-here' => 'Semua keutamaan berkaitan tiket disini',
 
 // StatusesController
-	'status-name-has-been-created' => 'Status :name has been created!',
-	'status-name-has-been-modified' => 'Status :name has been modified!',
-	'status-name-has-been-deleted' => 'Status :name has been deleted!',
+	'status-name-has-been-created' => 'Status :name berjaya ditambah!',
+	'status-name-has-been-modified' => 'Status :name berjaya dikemaskini!',
+	'status-name-has-been-deleted' => 'Status :name berjaya dibuang!',
 	'status-all-tickets-here' => 'Semua status berkaitan tiket disini',
 
 // CommentsController
@@ -128,11 +128,11 @@ return [
 	'notify-status-to' => ' Status untuk ',
 	'notify-transferred' => ' Dipindahkan ',
 	'notify-to-you' => ' kepada anda',
-	'notify-created-ticket' => ' tiket yang telah dicipta ',
+	'notify-created-ticket' => ' tiket yang telah ditambah ',
 	'notify-updated' => ' kemas kini ',
 
 	// TicketsController
-	'the-ticket-has-been-created' => 'Tiket telah dicipta!',
+	'the-ticket-has-been-created' => 'Tiket telah ditambah!',
 	'the-ticket-has-been-modified' => 'Tiket telah diubahsuai!',
 	'the-ticket-has-been-deleted' => 'Tiket :name has been deleted!',
 	'the-ticket-has-been-completed' => 'Tiket :name has been completed!',

@@ -14,9 +14,9 @@
 		<table class="table table-striped">
 			<thead>
 				<tr>
-					<th>Article Name</th>
-					<th>Category Name</th>
-					<th>Delete</th>
+					<th>{{ trans('helpdesk.title_knowledge_base') }}</th>
+					<th>{{ trans('helpdesk.category_knowledge_base') }}</th>
+					<th>{{ trans('helpdesk.action') }}</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -31,16 +31,16 @@
 					</td>
 					<td style="vertical-align: middle">
 					{!! link_to_route(
-	                                                    'knowledgebase.show', "View", $know->id,
+	                                                    'knowledgebase.show', trans('helpdesk.view') , $know->id,
 	                                                    ['class' => 'btn btn-primary'] )
                                 			!!}
 					{!! link_to_route(
-	                                                    'knowledgebase.edit', trans('ticketit::admin.btn-edit'), $know->id,
+	                                                    'knowledgebase.edit', trans('helpdesk.edit'), $know->id,
 	                                                    ['class' => 'btn btn-info'] )
                                 			!!}
 
                                 			{!! link_to_route(
-		                                                    'knowledgebase.destroy', trans('ticketit::admin.btn-delete'), $know->id,
+		                                                    'knowledgebase.destroy', trans('helpdesk.delete'), $know->id,
 		                                                    [
 		                                                    'class' => 'btn btn-danger deleteit',
 		                                                    'form' => "delete-$know->id",

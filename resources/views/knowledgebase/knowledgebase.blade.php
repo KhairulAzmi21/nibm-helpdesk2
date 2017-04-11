@@ -6,8 +6,8 @@
 	  @if(Auth::guest())
 	  <div class="jumbotron" >
 		  <div class="container">
-		    <h1>Knowledge Base</h1>      
-		    <p>A place to find solution to your question</p>
+		    <h1>{{ trans('helpdesk.knowledgebase')}}</h1>      
+		    <p>{{ trans('helpdesk.header')}}</p>
 		   </div>
 	  </div>
 	  @endif
@@ -20,7 +20,7 @@
 
 
 		                    <div class="input-group">
-		                        <input id="tags" type="text" class="form-control" placeholder="Search Knowledge Based">
+		                        <input id="tags" type="text" class="form-control" placeholder="{{ trans('helpdesk.search-knowledge-base')}}">
 		                        <span class="input-group-btn">
 		                            <button class="btn btn-default" type="button">
 		                                <span class="fa fa-search"></span>
@@ -31,9 +31,9 @@
 		                </div>
 		                @if (!Auth::guest())
 				
-		                	<a href="{{route('category.index') }}" class="btn btn-success">Category</a> 
+		                	<a href="{{route('category.index') }}" class="btn btn-success">{{ trans('helpdesk.category_knowledge_base') }}</a> 
 		                	@if($categories->isNotEmpty())
-		                	<a href="{{ route('knowledgebase.index') }}" class="btn btn-primary ">KnowledgeBase</a>
+		                	<a href="{{ route('knowledgebase.index') }}" class="btn btn-primary ">{{ trans('helpdesk.knowledgebase')}}</a>
 		                	@endif
 
 		                @endif
@@ -41,7 +41,7 @@
 			        <div class="row">
 			            <div class="col-lg-12">
 			                <h1 class="page-header">
-			                    Knowledge Based Archives
+			                    {{trans('helpdesk.archive')}}
 			                </h1>
 			            </div>
 			            

@@ -25,15 +25,15 @@
                     @endif
                     </a>
                     <ul class="dropdown-menu dropdown-messages table-striped">
-                        <li class="dropdown-title">Language</li>
+                        <li class="dropdown-title">{{trans('helpdesk.language')}}</li>
                         <li>
                             <a href="{{ route('lang.switch', 'en') }}" class="message striped-col">
-                               English <i class="flag-icon flag-icon-us flag-icon-squared pull-right"></i>
+                               {{trans('helpdesk.english')}} <i class="flag-icon flag-icon-us flag-icon-squared pull-right"></i>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('lang.switch', 'ms') }}" class="message">
-                                Malay <i class="flag-icon flag-icon-my flag-icon-squared pull-right"></i>
+                                {{trans('helpdesk.malay')}} <i class="flag-icon flag-icon-my flag-icon-squared pull-right"></i>
                             </a>
                         </li>    
                     </ul>
@@ -41,8 +41,8 @@
            
                 <!-- User Account: style can be found in dropdown-->
                 @if (Auth::guest())
-                            <li><a style="color: #ffffff; font-weight: bold;" href="{{ route('login') }}">Login</a></li>
-                            <li><a style="color: #ffffff; font-weight: bold;" href="{{ route('register') }}">Register</a></li>
+                            <li><a style="color: #ffffff; font-weight: bold;" href="{{ route('login') }}">{{trans('helpdesk.login')}}</a></li>
+                            <li><a style="color: #ffffff; font-weight: bold;" href="{{ route('register') }}">{{trans('helpdesk.register')}}</a></li>
                 @else
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle padding-user" data-toggle="dropdown">
@@ -69,13 +69,13 @@
                         <!-- Menu Body -->
                         <li class="p-t-3">
                             <a href="#">
-                                <i class="fa fa-fw fa-user"></i> My Profile
+                                <i class="fa fa-fw fa-user"></i>   {{trans('helpdesk.myprofile')}}
                             </a>
                         </li>
                         <li role="presentation"></li>
                         <li>
                             <a href="#">
-                                <i class="fa fa-fw fa-gear"></i> Account Settings
+                                <i class="fa fa-fw fa-gear"></i>    {{trans('helpdesk.setting')}}
                             </a>
                         </li>
                         <li role="presentation" class="divider"></li>
@@ -88,7 +88,7 @@
                                   <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                            Logout
+                                               {{trans('helpdesk.logout')}}
                                     </a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}

@@ -12,7 +12,7 @@
 					<input type="hidden" name="_method" value="PUT">
 			
 					<div class="form-group">
-						<label for="knowledge_base_category_id">Category</label>
+						<label for="knowledge_base_category_id">{{ trans('helpdesk.category_knowledge_base')}}</label>
 						<select class="form-control" id="knowledge_base_category_id" name="knowledge_base_category_id">
 						        @foreach($categories as $category)
 						        	@if($category->id == $knowledgebase->knowledge_base_category_id)
@@ -24,11 +24,11 @@
 						 </select>
 					</div>
 					<div class="form-group">
-						<label for="title">Title</label>
+						<label for="title">{{trans('helpdesk.title_knowledge_base') }}</label>
 						<input type="text" class="form-control" id="title" name="title" value="{{ $knowledgebase->title }}">
 					</div>
 					<div class="form-group">
-						<label for="body">Body</label>
+						<label for="body">{{trans('helpdesk.body')}}</label>
 						<textarea class="form-control summernote-editor" required id="body" name="body"  rows="7">
 							{{$knowledgebase->body}}
 						</textarea>
@@ -36,7 +36,7 @@
 					</div>
                                                             
 
-					<button type="submit" class="btn btn-primary">Update</button>
+					<button type="submit" class="btn btn-primary">{{trans('helpdesk.btn-update')}}</button>
 				</form>
 				
 			</div>

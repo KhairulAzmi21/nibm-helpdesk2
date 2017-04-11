@@ -7,7 +7,7 @@
 }
 .right-side {
     margin-left      : 240px;
-    background-color : #eee;
+    background-color : #ffffff;
 }
 @media screen and (min-width : 992px) {
 
@@ -305,10 +305,10 @@ h2 small {
 #donut #pieLabel3 div {
     padding-top : 16px !important;
 }
-.nav-tabs {
+/*.nav-tabs {
     border-bottom : 1px solid #fff;
     margin-top    : -20px;
-}
+}*/
 /*tabs css ends*/
 
 /*server*/
@@ -464,9 +464,9 @@ h2 small {
 .todolist_list #custom_textbox, .todolist_list .add_button, .todolist_list .save_todo {
     border-radius : 3px;
 }
-.form-inline .form-group {
+/*.form-inline .form-group {
     width : 63%;
-}
+}*/
 .form-inline #custom_textbox {
     width : 95%;
 }

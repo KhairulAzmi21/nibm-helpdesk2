@@ -10,10 +10,10 @@
 				<input type="hidden" name="_method" value="PUT">
 					{{ csrf_field() }}
 					<div class="form-group">
-						<label for="name">Category Name</label>
+						<label for="name">{{ trans('helpdesk.category-name')}}</label>
 						<input type="text" class="form-control" id="name" name="name" placeholder="{{ $category->name}}">
 					</div>					
-					<button type="submit" class="btn btn-primary pull-right">Update</button>
+					<button type="submit" class="btn btn-primary pull-right">{{ trans('helpdesk.btn-update')}}</button>
 				</form>								
 			</div>
 		</div>

@@ -10,7 +10,7 @@
 				<form action="{{ asset('knowledgebase') }}" method="POST" role="form">
 					{{ csrf_field() }}
 					<div class="form-group">
-						<label for="category">Category</label>
+						<label for="category">{{ trans('helpdesk.category_knowledge_base')}}</label>
 						<select class="form-control" id="category" name="category">
 						        @foreach($categories as $category)
 						        	<option value="{{ $category->id }}">{{$category->name}}</option>
@@ -18,17 +18,17 @@
 						 </select>
 					</div>
 					<div class="form-group">
-						<label for="title">Title</label>
-						<input type="text" class="form-control" id="title" name="title" placeholder="Input field">
+						<label for="title">{{trans('helpdesk.title_knowledge_base') }}</label>
+						<input type="text" class="form-control" id="title" name="title" >
 					</div>
 					<div class="form-group">
-						<label for="body">Body</label>
+						<label for="body">{{trans('helpdesk.body')}}</label>
 						<textarea class="form-control summernote-editor" required id="body" name="body" rows="7"></textarea>
                                                                         <span class="help-block">{!! trans('ticketit::lang.create-ticket-describe-issue') !!}</span>
 					</div>
                                                             
 
-					<button type="submit" class="btn btn-primary">Submit</button>
+					<button type="submit" class="btn btn-primary">{{trans('helpdesk.btn-submit')}}</button>
 				</form>
 				
 			</div>

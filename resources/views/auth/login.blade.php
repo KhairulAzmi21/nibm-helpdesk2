@@ -67,7 +67,7 @@
                             <a href="{{ route('password.request') }}" id="forgot" class="text-primary forgot1 pull-right">{{ trans('helpdesk.forgot_password')}} </a>
                         </div>
                         <div class="form-group ">
-                            <input type="submit" value="Login" class="btn btn-primary login-btn"/>
+                            <input type="submit" value="{{ trans('helpdesk.login') }}" class="btn btn-primary login-btn"/>
                             <br>
                             <hr>
                             <span> {{trans('helpdesk.new_to_nibm')}}<a href="{{ route('register')}}"> {{ trans('helpdesk.sign_up')}}</a></span>

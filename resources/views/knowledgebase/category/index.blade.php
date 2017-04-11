@@ -7,15 +7,15 @@
 		<div class="panel panel-default">
 			<div class="panel-heading">
 			<h2>
-			LIST CATEGORY
-			<a href="{{ route('category.create') }}" class="btn btn-success pull-right">Create New Article</a>
+			{{ trans('helpdesk.list-category')}}
+			<a href="{{ route('category.create') }}" class="btn btn-success pull-right">{{ trans('helpdesk.list-category')}}</a>
 			</h2>
 			</div>
 				<table class="table table-striped">
 					<thead>
 						<tr>
-							<th>Category Name</th>
-							<th>Action</th>
+							<th>{{ trans('helpdesk.name')}}</th>
+							<th>{{ trans('helpdesk.action')}}</th>
 						</tr>
 					</thead>
 					<tbody>

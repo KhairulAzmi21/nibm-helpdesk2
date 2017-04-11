@@ -46,7 +46,7 @@ return [
 
 // tickets-admin/____
 	'index-title' => 'Sistem Papan Pemuka Tiket',
-	'index-empty-records' => 'Tiket Belum Dicipta',
+	'index-empty-records' => 'Tiket Belum ditambah',
 	'index-total-tickets' => 'Jumlah Tiket',
 	'index-open-tickets' => 'Tiket yang Dibuka',
 	'index-closed-tickets' => 'Tiket yang Ditutup',
@@ -57,13 +57,13 @@ return [
 	'index-12-months' => '12 Bulan',
 	'index-tickets-share-per-category' => 'Bahagian Tiket Per Kategori',
 	'index-tickets-share-per-agent' => 'Bahagian Tiket Per Ejen',
-	'index-categories' => 'Kategori-kategori',
+	'index-categories' => 'Kategori',
 	'index-category' => 'Kategori',
-	'index-agents' => 'Ejen-ejen',
+	'index-agents' => 'Ejen',
 	'index-agent' => 'Ejen',
-	'index-administrators' => 'Pentadbir-pentadbir', //new
+	'index-administrators' => 'Pentadbir', //new
 	'index-administrator' => 'Pentadbir', //new
-	'index-users' => 'Pengguna-pengguna',
+	'index-users' => 'Pengguna',
 	'index-user' => 'Penguna',
 	'index-tickets' => 'Tiket',
 	'index-open' => 'Buka',
@@ -76,53 +76,53 @@ return [
 
 // tickets-admin/agent/____
 	'agent-index-title' => 'Pengurusan Ejen',
-	'btn-create-new-agent' => 'Cipta Ejen Baru',
+	'btn-create-new-agent' => 'Tambah Ejen Baru',
 	'agent-index-no-agents' => 'Tiada Ejen, ',
 	'agent-index-create-new' => 'Tambah Ejen-ejen',
 	'agent-create-title' => 'Tambah Ejen',
 	'agent-create-add-agents' => 'Tambah Ejen-ejen',
-	'agent-create-no-users' => 'Tiada Akaun Penguna, Cipta Akaun Pengguna.',
+	'agent-create-no-users' => 'Tiada Akaun Penguna, Tambah Akaun Pengguna.',
 	'agent-create-select-user' => 'Pilih akaun pengguna untuk ditambah sebagai ejen',
 
 // tickets-admin/administrators/____
 	'administrator-index-title' => 'Pengurusan Pentadbir', //new
-	'btn-create-new-administrator' => 'Cipta Pentadbir Baru', //new
+	'btn-create-new-administrator' => 'Tambah Pentadbir Baru', //new
 	'administrator-index-no-administrators' => 'Tiada Pentadbir, ', //new
-	'administrator-index-create-new' => 'Tambah pentadbir-pentadbir', //new
+	'administrator-index-create-new' => 'Tambah pentadbir', //new
 	'administrator-create-title' => 'Tambah Pentadbir', //new
-	'administrator-create-add-administrators' => 'Tambah pentadbir-pentadbir', //new
-	'administrator-create-no-users' => 'Tiada Akaun Penguna, Cipta Akaun Pengguna.', //new
+	'administrator-create-add-administrators' => 'Tambah pentadbir', //new
+	'administrator-create-no-users' => 'Tiada Akaun Penguna, Tambah Akaun Pengguna.', //new
 	'administrator-create-select-user' => 'Pilih akaun pengguna untuk ditambah sebagai pentadbir', //new
 
 // tickets-admin/category/____
 	'category-index-title' => 'Pengurusan Kategori',
-	'btn-create-new-category' => 'Cipta Kategori Baru',
+	'btn-create-new-category' => 'Tambah Kategori Baru',
 	'category-index-no-categories' => 'Tiada Kategori, ',
-	'category-index-create-new' => 'Cipta Kategori Baru',
+	'category-index-create-new' => 'Tambah Kategori Baru',
 	'category-index-js-delete' => 'Adakah anda pasti untuk memadam kategori: ',
-	'category-create-title' => 'Cipta Kategori Baru',
+	'category-create-title' => 'Tambah Kategori Baru',
 	'category-create-name' => 'Nama',
 	'category-create-color' => 'Warna',
 	'category-edit-title' => 'Ubah Kategori: :nama',
 
 // tickets-admin/priority/____
 	'priority-index-title' => 'Pengurusan Keutamaan',
-	'btn-create-new-priority' => 'Cipta Keutamaan Baru',
+	'btn-create-new-priority' => 'Tambah Keutamaan Baru',
 	'priority-index-no-priorities' => 'Tiada Keutamaan, ',
-	'priority-index-create-new' => 'Cipta Keutamaan Baru',
+	'priority-index-create-new' => 'Tambah Keutamaan Baru',
 	'priority-index-js-delete' => 'Adakah anda pasti untuk memadam keutamaan: ',
-	'priority-create-title' => 'Cipta Keutamaan Baru',
+	'priority-create-title' => 'Tambah Keutamaan Baru',
 	'priority-create-name' => 'Nama',
 	'priority-create-color' => 'Warna',
 	'priority-edit-title' => 'Ubah Keutamaan: :nama',
 
 // tickets-admin/status/____
 	'status-index-title' => 'Pengurusan Status',
-	'btn-create-new-status' => 'Cipta Status Baru',
+	'btn-create-new-status' => 'Tambah Status Baru',
 	'status-index-no-statuses' => 'Tiada Status,',
 	'status-index-create-new' => 'Cipta Status Baru',
 	'status-index-js-delete' => 'Adakah anda pasti untuk memadam status: ',
-	'status-create-title' => 'Cipta Status Baru',
+	'status-create-title' => 'Tambah Status Baru',
 	'status-create-name' => 'Nama',
 	'status-create-color' => 'Warna',
 	'status-edit-title' => 'Ubah Status: :nama',
