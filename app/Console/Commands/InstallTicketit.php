@@ -232,18 +232,18 @@ class InstallTicketit extends Command
 
         file_put_contents(config_path('app.php'), str_replace(
             '//Kordy\Ticketit\TicketitServiceProvider::class,',
-            'Kordy\Ticketit\TicketitServiceProvider::class,',
+            'App\Providers\TicketitServiceProvider::class,',
             file_get_contents(config_path('app.php'))
         ));
 
-        app()->register(\Kordy\Ticketit\TicketitServiceProvider::class);
+        app()->register(\App\Providers\TicketitServiceProvider::class);
     }
 
     private function setupTicketit(){
 
         $this->line("Setting up Ticketit...");
 
-        $installController = new \Kordy\Ticketit\Controllers\InstallController;
+        $installController = new \App\Http\Controllers\Ticketit\InstallController;
 
         $request = new \Illuminate\Http\Request();
         $request->offsetSet('master', 'another');

@@ -16,7 +16,7 @@ Route::group(['middleware' => \Kordy\Ticketit\Helpers\LaravelVersion::authMiddle
             ->name("$main_route.data");
 
     $field_name = last(explode('/', $main_route_path));
-    Route::resource($main_route_path, 'App\Http\Controllers\Ticketit\TicketsController', [
+    Route::resource($main_route_path, 'Kordy\Ticketit\Controllers\TicketsController', [
             'names' => [
                 'index'   => $main_route.'.index',
                 'store'   => $main_route.'.store',
