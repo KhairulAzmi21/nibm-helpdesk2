@@ -28,8 +28,8 @@
                 <div class="form-group col-lg-6">
                     {!! CollectiveForm::label('priority', trans('ticketit::lang.priority') . trans('ticketit::lang.colon'), ['class' => 'col-lg-6 control-label']) !!}
                     <div class="form-group col-lg-6">
-                         {!! CollectiveForm::text('priority', $priorities->name, ['class' => 'form-control', 'required' => 'required','disabled' => 'disabled']) !!}
-                         {{ CollectiveForm::hidden('priority_id', $priorities->id) }}
+                         {!! CollectiveForm::text('priority', App\Models\Priority::where('name','normal')->first()->name, ['class' => 'form-control', 'required' => 'required','disabled' => 'disabled']) !!}
+                         {{ CollectiveForm::hidden('priority_id',  App\Models\Priority::where('name','normal')->first()->id)}}
 
 
                     </div>
