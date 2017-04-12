@@ -94,7 +94,7 @@
                                                 <div id="count-box3" class="count-box">
                                                     {{ Kordy\Ticketit\Models\Ticket::count() }}
                                                 </div>
-                                                <span class="title">Total Tickets</span>
+                                                <span class="title">{{ trans('ticketit::admin.index-total-tickets') }}</span>
                                             </div>
                                             
                                         </div>
